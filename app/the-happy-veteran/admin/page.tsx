@@ -139,8 +139,8 @@ export default async function AdminPage() {
               <article key={order.id} className={`admin-order status-border-${order.status}`}>
                 <div className="admin-order-topline">
                   <div>
-                    <strong>{order.profiles?.full_name || "Member"}</strong>
-                    <span>@{order.profiles?.discord_name || "unknown"}</span>
+                    <strong>{order.profiles?.[0]?.full_name || "Member"}</strong>
+                    <span>@{order.profiles?.[0]?.discord_name || "unknown"}</span>
                   </div>
                   <time>{new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(new Date(order.created_at))}</time>
                 </div>
