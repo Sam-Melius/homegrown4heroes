@@ -65,7 +65,7 @@ export default async function AdminPage() {
           <article><span>Pending approval</span><strong>{pendingMembers.length}</strong><small>membership requests</small></article>
           <article><span>Approved members</span><strong>{activeMembers.length}</strong><small>active community members</small></article>
           <article><span>New orders</span><strong>{newOrders.length}</strong><small>waiting for review</small></article>
-          <article><span>Today&apos;s menu</span><strong>{menu ? "Live" : "Missing"}</strong><small>{menu ? "visible to members" : "needs to be posted"}</small></article>
+          <article><span>Member Shares</span><strong>{menu ? "Live" : "Missing"}</strong><small>{menu ? "visible in the lounge" : "not yet posted"}</small></article>
         </section>
 
         <section className="admin-priority-grid">
@@ -111,16 +111,16 @@ export default async function AdminPage() {
           <form action={saveMenu} className="admin-card menu-editor-card">
             <div className="admin-card-header">
               <div>
-                <span className="community-label">Member homepage</span>
-                <h2>Today&apos;s menu</h2>
+                <span className="community-label">Member lounge</span>
+                <h2>Member Shares</h2>
               </div>
               <span className={`admin-count-badge ${menu ? "is-live" : ""}`}>{menu ? "Live" : "Not posted"}</span>
             </div>
             <input type="hidden" name="menuDate" value={today} />
-            <label>Menu title<input name="title" defaultValue={menu?.title || ""} placeholder="Example: Tuesday Share" required /></label>
-            <label>Items available<textarea name="content" rows={9} defaultValue={menu?.content || ""} placeholder={"List one item per line, including any helpful details."} required /></label>
-            <label>Order deadline<input name="deadline" defaultValue={menu?.order_deadline || ""} placeholder="Example: 2:00 PM" /></label>
-            <button className="button button-full" type="submit">{menu ? "Update today’s menu" : "Publish today’s menu"}</button>
+            <label>Share title<input name="title" defaultValue={menu?.title || ""} placeholder="Example: Tuesday Share" required /></label>
+            <label>Member share details<textarea name="content" rows={9} defaultValue={menu?.content || ""} placeholder={"List one item per line, including any helpful details."} required /></label>
+            <label>Request deadline<input name="deadline" defaultValue={menu?.order_deadline || ""} placeholder="Example: 2:00 PM" /></label>
+            <button className="button button-full" type="submit">{menu ? "Update member shares" : "Publish member shares"}</button>
             <small className="admin-form-note">Changes appear on the member page as soon as this form is saved.</small>
           </form>
         </section>

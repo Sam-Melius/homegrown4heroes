@@ -228,3 +228,7 @@
   }
 }
 
+
+/* v11 client feedback */
+.contact-email-card{display:flex;flex-direction:column;justify-content:center}
+.contact-email-link{display:block;margin:8px 0 26px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,3vw,2rem);font-weight:700;color:var(--forest-deep);overflow-wrap:anywhere}

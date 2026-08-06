@@ -71,9 +71,9 @@ export default async function CommunityHub() {
           <small>{formattedDate}</small>
         </div>
         <nav className="member-actions" aria-label="Member controls">
-          <a className="member-nav-link" href="#today">Today</a>
+          <a className="member-nav-link" href="#shares">Member Shares</a>
           <a className="member-nav-link" href="#community">Community</a>
-          <a className="member-nav-link" href="#order">Order</a>
+          <a className="member-nav-link" href="#order">Member Ordering</a>
           {profile?.role === "admin" && (
             <Link className="button button-small button-light" href="/the-happy-veteran/admin">
               Admin dashboard
@@ -91,40 +91,40 @@ export default async function CommunityHub() {
         <section className="member-welcome" aria-labelledby="member-welcome-title">
           <div>
             <span className="community-label">Members-only space</span>
-            <h1 id="member-welcome-title">Today at Homegrown4Heroes</h1>
+            <h1 id="member-welcome-title">Welcome to The Happy Veteran</h1>
             <p>
-              Check what is available, place your request, and connect with the community.
+              View member shares, connect with the community, and access member ordering.
             </p>
           </div>
           <div className="welcome-mark" aria-hidden="true">HG4H</div>
         </section>
 
-        <section className="daily-layout" id="today">
+        <section className="daily-layout" id="shares">
           <article className={`daily-menu-card ${menu ? "has-menu" : "no-menu"}`}>
             <div className="card-heading-row">
               <div>
-                <span className="community-label">Today&apos;s shared menu</span>
-                <h2>{menu?.title || "Nothing has been posted yet"}</h2>
+                <span className="community-label">Member Shares</span>
+                <h2>{menu?.title || "No member shares have been posted yet"}</h2>
               </div>
-              {menu && <span className="menu-live-badge">Available today</span>}
+              {menu && <span className="menu-live-badge">Available to members</span>}
             </div>
             <div className="menu-content">
-              {menu?.content || "Check back later for today’s available items."}
+              {menu?.content || "Check back later for new member shares."}
             </div>
             <div className="menu-footer">
               {menu?.order_deadline ? (
-                <p><strong>Order deadline:</strong> {menu.order_deadline}</p>
+                <p><strong>Request deadline:</strong> {menu.order_deadline}</p>
               ) : (
-                <p>No order deadline has been posted.</p>
+                <p>No request deadline has been posted.</p>
               )}
-              <a className="button button-small" href="#order">Order from this menu</a>
+              <a className="button button-small" href="#order">Open Member Ordering</a>
             </div>
           </article>
 
           <aside className="member-side-card">
             <span className="community-label">How it works</span>
             <ol className="member-steps">
-              <li><strong>1</strong><span>Review today&apos;s shared items.</span></li>
+              <li><strong>1</strong><span>Review the latest member shares.</span></li>
               <li><strong>2</strong><span>Save your order to the member dashboard.</span></li>
               <li><strong>3</strong><span>Send the prepared email that opens for you.</span></li>
             </ol>
@@ -151,8 +151,8 @@ export default async function CommunityHub() {
         <section id="order" className="order-section">
           <div className="section-intro-row order-intro">
             <div>
-              <span className="community-label">Member ordering</span>
-              <h2>Send today&apos;s request</h2>
+              <span className="community-label">Member Ordering</span>
+              <h2>Submit a member request</h2>
             </div>
             <p>Your order is stored first, then a prepared email opens for final sending.</p>
           </div>

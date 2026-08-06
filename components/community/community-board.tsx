@@ -11,10 +11,7 @@ type Message = {
   content: string;
   created_at: string;
   channel_id: string;
-  profiles: {
-    full_name: string | null;
-    discord_name: string | null;
-  }[] | null;
+  profiles: { full_name: string | null; discord_name: string | null }[] | null;
 };
 
 function PostButton() {
@@ -132,15 +129,11 @@ export function CommunityBoard({
         <div className="message-list" ref={messageListRef} aria-live="polite">
           {visible.length ? (
             visible.map((message, index) => {
-             const profile = message.profiles?.[0];
-              const name =
-                profile?.full_name ||
-                profile?.discord_name ||
-                "Member";
+              const profile = message.profiles?.[0];
+              const name = profile?.full_name || profile?.discord_name || "Member";
               const previous = visible[index - 1];
               const sameAuthor = previous &&
-                (previous.profiles?.[0]?.full_name ||
-                previous.profiles?.[0]?.discord_name) === name &&
+                (previous.profiles?.[0]?.full_name || previous.profiles?.[0]?.discord_name) === name &&
                 new Date(message.created_at).getTime() - new Date(previous.created_at).getTime() < 5 * 60 * 1000;
 
               return (

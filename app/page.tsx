@@ -73,7 +73,7 @@ export default function HomePage() {
             <div className="channel-row"><span>#</span><div><strong>community</strong><small>Connect with verified members</small></div></div>
             <div className="channel-row"><span>#</span><div><strong>announcements</strong><small>Updates from Homegrown4Heroes</small></div></div>
           </div>
-          <div><span className="eyebrow">The Happy Veteran</span><h2>A smaller, safer community built around trust.</h2><p>Members sign up, verify their email, and provide their Discord name. Homegrown4Heroes manually reviews each request before community access is granted.</p><Link className="button" href="/the-happy-veteran">Explore The Happy Veteran</Link></div>
+          <div><span className="eyebrow">The Happy Veteran</span><h2>A smaller, safer community built around trust.</h2><p>Members create an account and provide their membership details. The Happy Veteran team compares that information with the membership application before granting access.</p><Link className="button" href="/the-happy-veteran">Explore The Happy Veteran</Link></div>
         </div>
       </section>
 

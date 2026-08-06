@@ -1,10 +1,95 @@
 import Link from "next/link";
 
 export default function HappyVeteranPage() {
-  return <>
-    <section className="happy-hero"><div className="shell happy-hero-grid"><div><span className="eyebrow">Members-only community</span><h1>The Happy Veteran</h1><p className="lead">A private place for veterans to connect, see what is being shared that day, participate in the community, and submit orders.</p><div className="actions"><Link className="button" href="/the-happy-veteran/login">Member Login</Link><Link className="button button-ghost" href="/the-happy-veteran/signup">Request Membership</Link></div></div><div className="happy-mark"><span>THV</span><small>Private veteran community</small></div></div></section>
-    <section className="section"><div className="shell"><div className="section-heading"><span className="eyebrow">Inside the community</span><h2>A small community built around connection.</h2></div><div className="card-grid"><article className="card"><span className="card-number">01</span><h3>Community</h3><p>Join private channels, share updates, and stay connected with other approved members.</p></article><article className="card"><span className="card-number">02</span><h3>Today’s Menu</h3><p>See what has been shared for the day and move directly into the member ordering flow.</p></article><article className="card"><span className="card-number">03</span><h3>Member Ordering</h3><p>Submit an order, save it to the member system, and send the prepared order email to Homegrown4Heroes.</p></article></div></div></section>
-    <section className="section section-dark"><div className="shell split"><div><span className="eyebrow">Membership approval</span><h2>Private by design.</h2><p className="lead">New accounts verify their email and provide a Discord name. Homegrown4Heroes manually reviews that information before granting access to the private community.</p></div><div className="approval-flow"><div><strong>1</strong><span>Create account</span></div><div><strong>2</strong><span>Verify email</span></div><div><strong>3</strong><span>Manual review</span></div><div><strong>4</strong><span>Enter community</span></div></div></div></section>
-    <section className="section"><div className="shell callout callout-earth"><div><span className="eyebrow">New to The Happy Veteran?</span><h2>Schedule a new-member consultation.</h2></div><a className="button" href="https://calendly.com/homegrown4heroes/new-member-consult" target="_blank" rel="noreferrer">Schedule Consult</a></div></section>
-  </>;
+  return (
+    <>
+      <section className="happy-hero">
+        <div className="shell happy-hero-grid">
+          <div>
+            <span className="eyebrow">Approved-member community</span>
+            <h1>The Happy Veteran</h1>
+            <p className="lead">
+              A welcoming member center where veterans and their supporters can connect,
+              participate, and access community resources.
+            </p>
+            <div className="actions">
+              <Link className="button" href="/the-happy-veteran/login">Member Login</Link>
+              <Link className="button button-ghost" href="/the-happy-veteran/signup">Request Membership</Link>
+            </div>
+          </div>
+          <div className="happy-mark">
+            <span>THV</span>
+            <small>Veterans and supporters</small>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="eyebrow">The member lounge</span>
+            <h2>A private space centered on connection.</h2>
+            <p className="lead">
+              Approved members receive access to the lounge, community updates, and
+              member-only resources.
+            </p>
+          </div>
+
+          <div className="card-grid">
+            <article className="card">
+              <span className="card-number">01</span>
+              <h3>Connect</h3>
+              <p>Participate in a welcoming space with approved members and supporters.</p>
+            </article>
+            <article className="card">
+              <span className="card-number">02</span>
+              <h3>Stay informed</h3>
+              <p>View member-only information and updates inside the lounge.</p>
+            </article>
+            <article className="card">
+              <span className="card-number">03</span>
+              <h3>Access resources</h3>
+              <p>Use the private tools and resources available to approved members.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-dark">
+        <div className="shell split">
+          <div>
+            <span className="eyebrow">Membership approval</span>
+            <h2>Access is reviewed personally.</h2>
+            <p className="lead">
+              The Happy Veteran team compares the information provided during signup
+              with your membership application before granting access to the member lounge.
+            </p>
+          </div>
+          <div className="approval-flow">
+            <div><strong>1</strong><span>Create an account</span></div>
+            <div><strong>2</strong><span>Provide membership details</span></div>
+            <div><strong>3</strong><span>Application review</span></div>
+            <div><strong>4</strong><span>Enter the lounge</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell callout callout-earth">
+          <div>
+            <span className="eyebrow">New to The Happy Veteran?</span>
+            <h2>Schedule a new-member consultation.</h2>
+          </div>
+          <a
+            className="button"
+            href="https://calendly.com/homegrown4heroes/new-member-consult"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Schedule Consult
+          </a>
+        </div>
+      </section>
+    </>
+  );
 }

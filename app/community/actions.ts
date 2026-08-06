@@ -10,7 +10,7 @@ async function approvedUser() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) redirect("/login");
+  if (!user) redirect("/the-happy-veteran/login");
 
   const { data: profile } = await supabase
     .from("profiles")
@@ -18,7 +18,7 @@ async function approvedUser() {
     .eq("id", user.id)
     .single();
 
-  if (profile?.status !== "approved") redirect("/community/pending");
+  if (profile?.status !== "approved") redirect("/the-happy-veteran/pending");
 
   return { supabase, user, profile };
 }
@@ -36,7 +36,7 @@ export async function submitMessage(formData: FormData) {
     content,
   });
 
-  revalidatePath("/community/hub");
+  revalidatePath("/the-happy-veteran/community");
 }
 
 export type OrderSubmissionResult =
@@ -93,7 +93,7 @@ export async function submitOrder(formData: FormData): Promise<OrderSubmissionRe
     `&subject=${encodeURIComponent(subject)}` +
     `&body=${encodeURIComponent(body)}`;
 
-  revalidatePath("/community/hub");
+  revalidatePath("/the-happy-veteran/community");
 
   return { success: true, mailtoUrl };
 }
