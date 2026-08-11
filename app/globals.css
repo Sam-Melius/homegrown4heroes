@@ -232,3 +232,362 @@
 /* v11 client feedback */
 .contact-email-card{display:flex;flex-direction:column;justify-content:center}
 .contact-email-link{display:block;margin:8px 0 26px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,3vw,2rem);font-weight:700;color:var(--forest-deep);overflow-wrap:anywhere}
+
+/* v13 Happy Veteran resources + admin role controls */
+.brand-copy strong{
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:900;
+  letter-spacing:-.035em;
+}
+.member-resources-section{margin:34px 0 42px}
+.member-section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:18px}
+.member-section-heading p{max-width:520px;margin:0}
+.member-resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:24px}
+.member-resource-card{display:flex;align-items:center;gap:14px;padding:20px;background:#fff;border:1px solid var(--line);box-shadow:5px 5px 0 rgba(23,26,21,.09)}
+.member-resource-card:hover{transform:translateY(-2px)}
+.member-resource-card strong,.member-resource-card small{display:block}
+.member-resource-card small{margin-top:4px;color:#67685f}
+.resource-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--forest-deep);color:#fff;font-weight:900}
+.lounge-guide-card{display:grid;grid-template-columns:.65fr 1.35fr;gap:30px;align-items:start;padding:26px;background:var(--soil);color:var(--paper);border-radius:4px}
+.lounge-guide-card .community-label{color:#e3c79c}
+.lounge-guide-card img{width:100%;height:auto;max-height:760px;object-fit:contain;background:#171a15}
+.member-role-form,.member-status-form{display:flex;gap:8px;align-items:center}
+.member-role-form select,.member-status-form select{min-width:105px}
+@media(max-width:900px){
+  .member-resource-grid{grid-template-columns:1fr}
+  .lounge-guide-card{grid-template-columns:1fr}
+  .member-section-heading{align-items:start;flex-direction:column}
+}
+
+/* v14 shared inventory */
+.member-resource-card-simple{
+  justify-content:flex-start;
+  min-height:78px;
+}
+.member-resource-card-simple strong{
+  font-size:1.05rem;
+}
+.shared-inventory-page{
+  min-height:70vh;
+  padding:64px 0 90px;
+  background:var(--cream);
+}
+.shared-inventory-shell{
+  width:min(860px,calc(100% - 36px));
+}
+.shared-inventory-header{
+  margin:28px 0 24px;
+}
+.shared-inventory-header p{
+  color:#68665d;
+}
+.shared-inventory-content{
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:8px 8px 0 rgba(23,26,21,.1);
+  padding:30px;
+}
+.shared-inventory-content pre{
+  margin:0;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  font:inherit;
+  line-height:1.75;
+}
+
+
+/* v15 structured inventory manager */
+.inventory-manager-card{
+  margin-bottom:28px;
+}
+.inventory-add-category{
+  margin:18px 0 26px;
+  padding:18px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+.inventory-inline-form{
+  display:flex;
+  gap:10px;
+  align-items:end;
+}
+.inventory-inline-form input{
+  flex:1;
+}
+.inventory-admin-list{
+  display:grid;
+  gap:20px;
+}
+.inventory-admin-category{
+  border:1px solid var(--line);
+  background:#fff;
+}
+.inventory-category-admin-header{
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px;
+  background:var(--forest-deep);
+  color:#fff;
+}
+.inventory-category-name-form{
+  display:flex;
+  gap:10px;
+  flex:1;
+}
+.inventory-category-name-form input{
+  flex:1;
+  min-width:0;
+}
+.inventory-admin-items{
+  display:grid;
+}
+.inventory-admin-item{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:14px;
+  align-items:end;
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+}
+.inventory-item-edit-form{
+  display:grid;
+  grid-template-columns:1fr 1fr auto;
+  gap:10px;
+  align-items:end;
+}
+.inventory-item-edit-form label,
+.inventory-add-item-form label{
+  margin:0;
+}
+.inventory-delete-link{
+  border:0;
+  background:transparent;
+  color:#8b2828;
+  font-weight:800;
+  cursor:pointer;
+  padding:9px 4px;
+}
+.inventory-category-empty{
+  padding:18px 16px;
+  color:#69685f;
+  border-bottom:1px solid var(--line);
+}
+.inventory-add-item-form{
+  display:grid;
+  grid-template-columns:1fr 1fr auto;
+  gap:10px;
+  align-items:end;
+  padding:16px;
+  background:#f3eee2;
+}
+.member-inventory-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.member-inventory-category{
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:7px 7px 0 rgba(23,26,21,.08);
+}
+.member-inventory-category h2{
+  margin:0;
+  padding:18px 20px;
+  background:var(--soil);
+  color:var(--paper);
+  font-size:1.55rem;
+}
+.member-inventory-items{
+  display:grid;
+}
+.member-inventory-items article{
+  padding:15px 20px;
+  border-bottom:1px solid var(--line);
+}
+.member-inventory-items article:last-child{
+  border-bottom:0;
+}
+.member-inventory-items strong,
+.member-inventory-items span{
+  display:block;
+}
+.member-inventory-items span{
+  margin-top:3px;
+  color:#6a675e;
+  font-size:.9rem;
+}
+.inventory-empty-category{
+  padding:18px 20px;
+  margin:0;
+  color:#6a675e;
+}
+
+@media(max-width:900px){
+  .member-inventory-grid{
+    grid-template-columns:1fr;
+  }
+  .inventory-item-edit-form,
+  .inventory-add-item-form{
+    grid-template-columns:1fr;
+  }
+  .inventory-admin-item{
+    grid-template-columns:1fr;
+  }
+  .inventory-category-admin-header{
+    align-items:stretch;
+    flex-direction:column;
+  }
+  .inventory-category-name-form{
+    flex-direction:column;
+  }
+}
+
+
+/* v16 native lounge experience guide */
+.member-resource-grid-secondary{margin-top:14px}
+.lounge-experience-admin-card{margin-bottom:28px}
+.experience-admin-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px}
+.experience-admin-grid>section{padding:18px;background:var(--cream);border:1px solid var(--line)}
+.experience-admin-list{display:grid;gap:10px}
+.experience-edible-admin-row{display:grid;grid-template-columns:1fr 110px auto;gap:10px;align-items:end}
+.experience-flower-admin-row{display:grid;grid-template-columns:110px repeat(4,80px) auto;gap:8px;align-items:end}
+.experience-edible-admin-row label,.experience-flower-admin-row label{margin:0}
+.experience-flower-admin-row input{text-align:center}
+
+.lounge-experience-page{
+  min-height:100vh;
+  padding:56px 0 80px;
+  background:#e9dfc9;
+  background-image:
+    radial-gradient(circle at 15% 15%,rgba(121,35,31,.08),transparent 22%),
+    radial-gradient(circle at 84% 13%,rgba(70,83,48,.09),transparent 24%);
+}
+.lounge-experience-shell{width:min(1120px,calc(100% - 34px))}
+.lounge-back-link{display:inline-block;margin-bottom:28px}
+.lounge-experience-header{text-align:center;padding:36px 18px 32px;border-top:4px solid #7d211f;border-bottom:1px solid rgba(75,43,31,.25)}
+.lounge-experience-header h1{color:#761f1e;margin-bottom:8px}
+.lounge-experience-header p{margin:0}
+.lounge-experience-layout{display:grid;grid-template-columns:.72fr 1.45fr .83fr;gap:16px;margin-top:24px;align-items:stretch}
+.lounge-experience-panel{background:#f8efda;border:2px solid #7b291f;box-shadow:5px 5px 0 rgba(87,43,25,.13);overflow:hidden}
+.lounge-experience-panel h2{margin:0;padding:14px 18px;text-align:center;text-transform:uppercase;letter-spacing:.05em;background:#761f1e;color:#f8efda;font-size:1.5rem}
+.edible-time-list{display:grid}
+.edible-time-list article{display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:center;padding:20px;border-bottom:1px solid rgba(83,49,32,.25)}
+.edible-time-list article:last-child{border-bottom:0}
+.edible-time-list strong{font-size:1.15rem}
+.edible-time-list span{grid-row:1/3;grid-column:2;font-family:Georgia,serif;font-size:2.4rem;color:#7c231f}
+.edible-time-list small{text-transform:uppercase;letter-spacing:.08em}
+.flower-time-table{padding:10px 14px 16px}
+.flower-time-heading{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;font-weight:800;text-align:center}
+.flower-time-table article{display:grid;grid-template-columns:90px 1fr;align-items:center;border-top:1px solid rgba(83,49,32,.25);padding:13px 8px}
+.flower-time-table article>strong{text-align:center;font-size:1.25rem}
+.flower-time-table article>div{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+.flower-time-table article span{font-weight:800;font-size:1.1rem}
+.concentrate-list{display:grid}
+.concentrate-list span{padding:16px 18px;border-bottom:1px solid rgba(83,49,32,.22);font-weight:800;text-transform:uppercase}
+.concentrate-list span:last-child{border-bottom:0}
+.additional-products-strip{margin-top:18px;padding:18px;background:#f8efda;border:2px solid #7b291f;text-align:center}
+.additional-products-strip h2{font-size:1.25rem;text-transform:uppercase;margin:0 0 14px}
+.additional-products-strip>div{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.additional-products-strip span{padding:10px;border-right:1px solid rgba(83,49,32,.22);font-weight:800;text-transform:uppercase;font-size:.8rem}
+.additional-products-strip span:last-child{border-right:0}
+.experience-disclaimer{text-align:center;background:#761f1e;color:#fff;padding:12px 18px;margin:14px 0 0;font-weight:700;font-size:.82rem;letter-spacing:.03em}
+
+@media(max-width:1050px){
+  .experience-admin-grid{grid-template-columns:1fr}
+  .experience-flower-admin-row{grid-template-columns:110px repeat(4,1fr); }
+  .experience-flower-admin-row .button{grid-column:1/-1}
+  .lounge-experience-layout{grid-template-columns:1fr 1.35fr}
+  .concentrates-panel{grid-column:1/-1}
+  .concentrate-list{grid-template-columns:repeat(3,1fr)}
+  .concentrate-list span{border-right:1px solid rgba(83,49,32,.22)}
+}
+@media(max-width:720px){
+  .experience-edible-admin-row,.experience-flower-admin-row{grid-template-columns:1fr 1fr}
+  .experience-rating-field{grid-column:1/-1}
+  .experience-flower-admin-row .button{grid-column:1/-1}
+  .lounge-experience-layout{grid-template-columns:1fr}
+  .concentrates-panel{grid-column:auto}
+  .concentrate-list{grid-template-columns:1fr 1fr}
+  .additional-products-strip>div{grid-template-columns:1fr 1fr}
+  .additional-products-strip span{border-right:0;border-bottom:1px solid rgba(83,49,32,.18)}
+}
+
+
+/* v17 typography + member resource grid */
+:root{
+  --site-font: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+.site-header,
+.site-footer,
+.card,
+.product,
+.admin-page,
+.community-board,
+.shared-inventory-page,
+.lounge-experience-page{
+  font-family: var(--site-font) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-copy strong,
+.brand-copy small,
+.eyebrow,
+.button,
+.text-link,
+.community-label,
+.card-number,
+.admin-count-badge,
+.status-pill{
+  font-family: var(--site-font) !important;
+}
+
+h1,
+h2,
+h3,
+.brand-copy strong{
+  font-weight: 900;
+  letter-spacing: -.03em;
+}
+
+.member-resource-grid{
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.member-resource-card-simple{
+  justify-content: center !important;
+  text-align: center;
+  min-height: 96px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member-resource-card-simple .resource-icon{
+  margin: 0 auto;
+}
+
+.member-resource-card-simple strong{
+  text-align: center;
+}
+
+@media(max-width: 680px){
+  .member-resource-grid{
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -71,7 +71,7 @@ export default async function CommunityHub() {
           <small>{formattedDate}</small>
         </div>
         <nav className="member-actions" aria-label="Member controls">
-          <a className="member-nav-link" href="#shares">Member Shares</a>
+          <Link className="member-nav-link" href="/the-happy-veteran/shared-inventory">Shared Inventory</Link>
           <a className="member-nav-link" href="#community">Community</a>
           <a className="member-nav-link" href="#order">Member Ordering</a>
           {profile?.role === "admin" && (
@@ -93,46 +93,12 @@ export default async function CommunityHub() {
             <span className="community-label">Members-only space</span>
             <h1 id="member-welcome-title">Welcome to The Happy Veteran</h1>
             <p>
-              View member shares, connect with the community, and access member ordering.
+              Connect with the community and access member-only resources.
             </p>
           </div>
           <div className="welcome-mark" aria-hidden="true">HG4H</div>
         </section>
 
-        <section className="daily-layout" id="shares">
-          <article className={`daily-menu-card ${menu ? "has-menu" : "no-menu"}`}>
-            <div className="card-heading-row">
-              <div>
-                <span className="community-label">Member Shares</span>
-                <h2>{menu?.title || "No member shares have been posted yet"}</h2>
-              </div>
-              {menu && <span className="menu-live-badge">Available to members</span>}
-            </div>
-            <div className="menu-content">
-              {menu?.content || "Check back later for new member shares."}
-            </div>
-            <div className="menu-footer">
-              {menu?.order_deadline ? (
-                <p><strong>Request deadline:</strong> {menu.order_deadline}</p>
-              ) : (
-                <p>No request deadline has been posted.</p>
-              )}
-              <a className="button button-small" href="#order">Open Member Ordering</a>
-            </div>
-          </article>
-
-          <aside className="member-side-card">
-            <span className="community-label">How it works</span>
-            <ol className="member-steps">
-              <li><strong>1</strong><span>Review the latest member shares.</span></li>
-              <li><strong>2</strong><span>Save your order to the member dashboard.</span></li>
-              <li><strong>3</strong><span>Send the prepared email that opens for you.</span></li>
-            </ol>
-            <p className="member-help-note">
-              Need help? Post in <strong>#questions</strong> below so the group can help.
-            </p>
-          </aside>
-        </section>
 
         <section id="community" className="community-section-wrap">
           <div className="section-intro-row">
@@ -159,6 +125,57 @@ export default async function CommunityHub() {
           <OrderForm recentOrders={(recentOrders || []) as OrderSummary[]} />
         </section>
       </div>
-    </main>
+    
+        <section className="member-resources-section" id="member-resources">
+          <div className="member-resource-grid">
+            <Link
+              className="member-resource-card member-resource-card-simple"
+              href="/the-happy-veteran/shared-inventory"
+            >
+              <span className="resource-icon">→</span>
+              <strong>Shared Inventory</strong>
+            </Link>
+
+            <Link
+              className="member-resource-card member-resource-card-simple"
+              href="/the-happy-veteran/lounge-experience"
+            >
+              <span className="resource-icon">→</span>
+              <strong>Suggested Lounge Experience</strong>
+            </Link>
+
+            <a
+              className="member-resource-card member-resource-card-simple"
+              href="https://thv-curbside-service-au-volant.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="resource-icon">↗</span>
+              <strong>Curbside</strong>
+            </a>
+
+            <a
+              className="member-resource-card member-resource-card-simple"
+              href="https://thvlivraisonadomicile.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="resource-icon">↗</span>
+              <strong>Delivery</strong>
+            </a>
+          </div>
+
+          {/* <div className="member-resource-grid member-resource-grid-secondary">
+            <Link
+              className="member-resource-card member-resource-card-simple"
+              href="/the-happy-veteran/lounge-experience"
+            >
+              <span className="resource-icon">→</span>
+              <strong>Suggested Lounge Experience</strong>
+            </Link>
+          </div> */}
+        </section>
+
+</main>
   );
 }
