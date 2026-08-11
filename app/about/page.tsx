@@ -3,14 +3,20 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <>
-      <section className="inner-hero">
-        <div className="shell inner-hero-grid">
-          <div>
-            <span className="eyebrow">About Homegrown4Heroes</span>
-            <h1>Healing heroes. Cultivating change.</h1>
-            <p className="lead">Homegrown4Heroes is a 501(c)(3) nonprofit supporting veterans through accessible plant-based wellness, education, practical resources, and community.</p>
-          </div>
-          <Image src="/homegrown4heroes-logo.png" alt="Homegrown4Heroes" width={480} height={480} />
+      <section className="photo-hero about-hero">
+        <Image
+          className="photo-hero-image"
+          src="/media/soldier-pic.webp"
+          alt="Veteran seated in a sunlit garden"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="photo-hero-overlay about-hero-overlay" />
+        <div className="shell photo-hero-content about-hero-content">
+          <span className="eyebrow">About Homegrown4Heroes</span>
+          <h1>Healing heroes. Cultivating change.</h1>
+          <p className="lead">Homegrown4Heroes is a 501(c)(3) nonprofit supporting veterans through accessible plant-based wellness, education, practical resources, and community.</p>
         </div>
       </section>
 
@@ -27,7 +33,7 @@ export default function AboutPage() {
           <div className="info-strip">
             <div><strong>501(c)(3)</strong><span>Nonprofit organization</span></div>
             <div><strong>99-0783233</strong><span>Federal EIN</span></div>
-            <div><strong>Richmond, VA</strong><span>Serving the veteran community</span></div>
+            <div><strong>Richmond, VA</strong><span>Founded in Richmond · Serving veterans nationwide</span></div>
           </div>
         </div>
       </section>

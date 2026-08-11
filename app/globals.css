@@ -591,3 +591,916 @@ h3,
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* v18 client design direction: warmer botanical social-club aesthetic */
+:root{--ink:#2d241f;--charcoal:#3a302a;--forest:#536447;--forest-deep:#34452f;--moss:#7d8b64;--sage:#b8bea1;--cream:#f3e6d0;--paper:#fffaf1;--soil:#5c3b32;--clay:#b86755;--burgundy:#8f3340;--gold:#c59a68;--line:#dfcfba;--shadow:0 22px 50px rgba(72,48,38,.13);--site-font:"Trebuchet MS","Avenir Next",Avenir,Arial,sans-serif}
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3,h4,h5,h6{font-family:var(--site-font)!important;font-weight:800;letter-spacing:-.035em}
+.eyebrow{color:var(--burgundy);letter-spacing:.14em}.section-dark{background:#48533f!important}.section-soft{background:#f4eadb!important}
+.site-header{background:rgba(255,250,241,.97);border-bottom:1px solid #e6d4bd;box-shadow:0 8px 24px rgba(83,56,44,.06)}
+.nav-wrap{min-height:96px}.brand{gap:12px}.brand img{width:64px;height:64px}
+.brand-copy strong{font-size:1rem;letter-spacing:.005em!important;color:var(--soil)}
+.brand-copy small{margin-top:7px;color:var(--burgundy);letter-spacing:.09em;font-size:.58rem;text-transform:none}
+.site-header nav{font-weight:700;color:#4b3c34}.site-header nav>a:not(.button):hover,.nav-dropdown-toggle:hover{color:var(--burgundy)}
+.button{border-radius:999px;background:var(--burgundy);box-shadow:none;padding:13px 22px;letter-spacing:.035em}.button:hover{background:var(--soil);transform:translateY(-1px)}
+.button-ghost{color:var(--burgundy);border-color:var(--burgundy);background:rgba(255,255,255,.5)}
+.button-membership{background:#fff4e5;color:#5b2530;border:2px solid #fff4e5;box-shadow:0 5px 16px rgba(0,0,0,.12)}.button-membership:hover{background:#fff;color:#5b2530}
+.card,.member-resource-card,.shop-card,.coloring-download-card{border-radius:18px;box-shadow:0 10px 28px rgba(78,54,43,.09)}
+.photo-hero-overlay{background:linear-gradient(90deg,rgba(50,59,42,.88) 0%,rgba(63,68,48,.67) 46%,rgba(85,65,54,.24) 76%,rgba(85,65,54,.12) 100%)}
+.photo-hero-content .eyebrow{color:#f0c5b1}.story-media-section{background:#f0dfc8}.image-story-section{background:#fffaf1}.logo-showcase-section{background:#624238}.callout-earth{background:#ead3bd!important}
+.happy-hero{background:radial-gradient(circle at 88% 18%,rgba(185,103,85,.25),transparent 25%),radial-gradient(circle at 8% 80%,rgba(197,154,104,.22),transparent 27%),linear-gradient(135deg,#485a43,#6d5147)!important}
+.happy-hero .eyebrow{color:#f0c5b1}.happy-mark{border-radius:50% 50% 46% 54%;background:#f3e6d0!important;color:#6f2d39!important;box-shadow:18px 18px 0 rgba(143,51,64,.18)!important}.happy-mark small{color:#6b4a3e!important}
+.inner-hero{background:radial-gradient(circle at 82% 20%,rgba(184,103,85,.15),transparent 23%),linear-gradient(135deg,#f5e8d3,#fffaf1 55%,#e7d6c1)!important;border-bottom-color:var(--burgundy)!important}
+.info-strip{border-radius:18px;overflow:hidden}.info-strip strong{color:var(--burgundy)}
+.partner-name-card strong{font-size:1.45rem;color:#fff7ea;text-align:center}
+.cannabis-partner-section{background:#3f4939;color:#fffaf1}.cannabis-partner-card{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:center}
+.cannabismd-wordmark{min-height:300px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:20px;padding:36px;background:#171b16;border:1px solid rgba(255,255,255,.12)}
+.cannabismd-leaf{font-size:4rem;color:#a9bd67}.cannabismd-wordmark strong{display:block;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.02em}.cannabismd-wordmark strong span{color:#a9bd67}.cannabismd-wordmark small{display:block;text-align:center;font-size:1.2rem;letter-spacing:.18em}
+.cannabis-partner-copy .eyebrow{color:#efb6a4}.cannabis-partner-copy p{color:#f3eadf}.member-resource-card-simple{border-radius:18px}.resource-icon{background:var(--burgundy)}
+@media(max-width:900px){.cannabis-partner-card{grid-template-columns:1fr}}@media(max-width:680px){.brand-copy small{display:none}.brand-copy strong{font-size:.9rem}}
+
+
+/* v19 supplied partner + veteran assets */
+.about-soldier-image{
+  overflow:hidden;
+  border-radius:28px;
+  box-shadow:0 18px 42px rgba(66,45,35,.16);
+  min-height:360px;
+}
+.about-soldier-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:360px;
+  object-fit:cover;
+  object-position:center;
+}
+.logo-showcase-section .real-logo-card{
+  min-height:190px;
+}
+.logo-showcase-section .real-logo-card img{
+  max-width:88%;
+  max-height:135px;
+  object-fit:contain;
+}
+@media(max-width:720px){
+  .about-soldier-image,
+  .about-soldier-image img{
+    min-height:280px;
+  }
+}
+
+
+/* v20 softer botanical / social-club refinement */
+:root{
+  --ink:#3b2f2b;
+  --charcoal:#4b3c37;
+  --forest:#6f7d5d;
+  --forest-deep:#536347;
+  --moss:#96a37b;
+  --sage:#c9cfb7;
+  --cream:#f7ead8;
+  --paper:#fffaf5;
+  --soil:#6b4a40;
+  --clay:#c77f70;
+  --burgundy:#a44d5e;
+  --gold:#d7ad79;
+  --line:#e8d6c4;
+  --site-font:"Avenir Next","Segoe UI",Arial,sans-serif;
+}
+
+html,body,button,input,textarea,select,
+.site-header,.site-footer,.card,.admin-page,.community-board,
+.shared-inventory-page,.lounge-experience-page{
+  font-family:var(--site-font)!important;
+}
+
+h1,h2,h3,h4,h5,h6,
+.brand-copy strong,.brand-copy small,.button,.eyebrow{
+  font-family:var(--site-font)!important;
+}
+
+h1,h2,h3{
+  font-weight:800;
+  letter-spacing:-.025em!important;
+}
+
+body{
+  background:#fffaf5;
+  color:#3b2f2b;
+}
+
+.section-dark{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#68765a,#7a6259)!important;
+}
+
+.section-dark::before,
+.section-dark::after,
+.happy-hero::before,
+.happy-hero::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  opacity:.18;
+  filter:blur(.2px);
+}
+
+.section-dark::before,
+.happy-hero::before{
+  width:180px;
+  height:180px;
+  left:-45px;
+  bottom:-55px;
+  background:
+    radial-gradient(circle at 50% 18%,#e7a3ad 0 17%,transparent 18%),
+    radial-gradient(circle at 82% 50%,#dc7486 0 17%,transparent 18%),
+    radial-gradient(circle at 50% 82%,#e7a3ad 0 17%,transparent 18%),
+    radial-gradient(circle at 18% 50%,#dc7486 0 17%,transparent 18%),
+    radial-gradient(circle at 50% 50%,#c7a16f 0 18%,transparent 19%);
+}
+
+.section-dark::after,
+.happy-hero::after{
+  width:145px;
+  height:145px;
+  right:-25px;
+  top:-20px;
+  background:
+    radial-gradient(circle at 50% 18%,#f3b5bd 0 16%,transparent 17%),
+    radial-gradient(circle at 82% 50%,#e36f7e 0 16%,transparent 17%),
+    radial-gradient(circle at 50% 82%,#f3b5bd 0 16%,transparent 17%),
+    radial-gradient(circle at 18% 50%,#e36f7e 0 16%,transparent 17%),
+    radial-gradient(circle at 50% 50%,#c9a66c 0 17%,transparent 18%);
+}
+
+.section-dark>.shell,
+.happy-hero>.shell{
+  position:relative;
+  z-index:1;
+}
+
+.about-photo-hero{
+  position:relative;
+  min-height:640px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#4e5946;
+}
+
+.about-photo-hero-image{
+  object-fit:cover;
+  object-position:center 48%;
+}
+
+.about-photo-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(54,48,42,.88) 0%,rgba(62,54,46,.65) 42%,rgba(56,64,49,.25) 72%,rgba(56,64,49,.1) 100%);
+}
+
+.about-photo-hero-content{
+  position:relative;
+  z-index:1;
+  color:#fffaf5;
+  padding-top:92px;
+  padding-bottom:92px;
+}
+
+.about-photo-hero-content h1{
+  max-width:720px;
+  color:#fffaf5;
+  text-shadow:0 5px 30px rgba(0,0,0,.25);
+}
+
+.about-photo-hero-content .lead{
+  max-width:660px;
+  color:#fff7ed;
+  text-shadow:0 2px 14px rgba(0,0,0,.24);
+}
+
+.about-photo-hero-content .eyebrow{
+  color:#f3b8b6;
+}
+
+.sponsorship-contribute{
+  background:linear-gradient(135deg,#667458,#7b6259)!important;
+}
+
+.sponsorship-contribute .section-heading h2{
+  color:#fffaf5!important;
+}
+
+.sponsorship-contribute .eyebrow{
+  color:#f4beb5!important;
+}
+
+.sponsorship-card-grid .card{
+  background:#fff9f0!important;
+  border:1px solid #ead7c4!important;
+  color:#3b2f2b!important;
+}
+
+.sponsorship-card-grid .card h3{
+  color:#7d3f4d!important;
+}
+
+.sponsorship-card-grid .card p{
+  color:#54443d!important;
+}
+
+.happy-hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 20%,rgba(224,142,153,.22),transparent 24%),
+    linear-gradient(135deg,#718061,#8b7065)!important;
+}
+
+.thv-tagline{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 13px;
+  border-radius:999px;
+  background:rgba(255,250,245,.12);
+  border:1px solid rgba(255,250,245,.24);
+  color:#ffe6db!important;
+}
+
+.botanical-badge{
+  border-radius:42% 58% 55% 45% / 48% 42% 58% 52%!important;
+  background:#fff3df!important;
+  border:3px solid rgba(164,77,94,.24);
+}
+
+.botanical-badge span{
+  color:#a44d5e!important;
+}
+
+.botanical-badge small{
+  color:#6a5048!important;
+  max-width:170px;
+  text-align:center;
+}
+
+.card{
+  border-radius:22px;
+}
+
+.button{
+  border-radius:999px;
+}
+
+.callout-earth{
+  background:linear-gradient(135deg,#f1d8c8,#efe3cb)!important;
+  border-radius:26px;
+}
+
+.info-strip{
+  background:#fff7ed;
+  box-shadow:0 12px 30px rgba(87,57,48,.07);
+}
+
+@media(max-width:720px){
+  .about-photo-hero{
+    min-height:560px;
+    align-items:end;
+  }
+  .about-photo-hero-image{
+    object-position:62% center;
+  }
+  .about-photo-hero-overlay{
+    background:linear-gradient(180deg,rgba(53,49,44,.2) 0%,rgba(53,49,44,.82) 67%,rgba(53,49,44,.94) 100%);
+  }
+  .about-photo-hero-content{
+    padding-top:180px;
+    padding-bottom:58px;
+  }
+}
+
+
+/* v21 exact hero behavior + sponsorship readability */
+.about-hero{
+  min-height:720px !important;
+  height:72vh;
+  max-height:860px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+.about-hero .photo-hero-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 48% !important;
+}
+.about-hero .about-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(42,39,34,.86) 0%,
+    rgba(48,44,38,.64) 40%,
+    rgba(48,52,42,.24) 70%,
+    rgba(48,52,42,.08) 100%
+  ) !important;
+}
+.about-hero .about-hero-content{
+  position:relative;
+  z-index:2;
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.about-hero .about-hero-content h1,
+.about-hero .about-hero-content p{
+  color:#fffaf5 !important;
+}
+.about-hero .about-hero-content .eyebrow{
+  color:#f4b8b5 !important;
+}
+
+.sponsorship-contribute .sponsorship-card-grid .card{
+  background:#fffaf5 !important;
+  color:#2f2521 !important;
+  opacity:1 !important;
+}
+.sponsorship-contribute .sponsorship-card-grid .card h3{
+  color:#6f2938 !important;
+  opacity:1 !important;
+}
+.sponsorship-contribute .sponsorship-card-grid .card p,
+.sponsorship-contribute .sponsorship-card-grid .card span,
+.sponsorship-contribute .sponsorship-card-grid .card a{
+  color:#3d302a !important;
+  opacity:1 !important;
+}
+.sponsorship-contribute .sponsorship-card-grid .card *{
+  text-shadow:none !important;
+}
+
+@media(max-width:720px){
+  .about-hero{
+    min-height:620px !important;
+    height:auto;
+    align-items:flex-end;
+  }
+  .about-hero .photo-hero-image{
+    object-position:62% center !important;
+  }
+  .about-hero .about-hero-overlay{
+    background:linear-gradient(
+      180deg,
+      rgba(42,39,34,.12) 0%,
+      rgba(42,39,34,.48) 48%,
+      rgba(42,39,34,.92) 100%
+    ) !important;
+  }
+  .about-hero .about-hero-content{
+    padding-top:250px;
+    padding-bottom:54px;
+  }
+}
+
+
+/* v22 The Happy Veteran: warm lounge / botanical palette, less military */
+.happy-hero{
+  background:
+    radial-gradient(circle at 83% 18%,rgba(219,145,157,.34),transparent 27%),
+    radial-gradient(circle at 13% 82%,rgba(218,176,125,.22),transparent 28%),
+    linear-gradient(135deg,#8f5e58 0%,#a87369 48%,#80665c 100%) !important;
+}
+
+.happy-hero::before,
+.happy-hero::after{
+  opacity:.28;
+}
+
+.happy-hero h1,
+.happy-hero .lead{
+  color:#fffaf5 !important;
+}
+
+.happy-hero .thv-tagline{
+  color:#fff0e8 !important;
+  background:rgba(255,248,239,.13);
+  border-color:rgba(255,240,232,.3);
+}
+
+.happy-hero .button{
+  background:#9d4055;
+  color:#fffaf5;
+}
+
+.happy-hero .button:hover{
+  background:#7f3445;
+}
+
+.happy-hero .button-membership{
+  background:#fff0df !important;
+  color:#783647 !important;
+  border-color:#fff0df !important;
+}
+
+.happy-hero .botanical-badge{
+  background:#fff0df !important;
+  border-color:rgba(157,64,85,.28);
+  box-shadow:18px 18px 0 rgba(109,57,62,.16) !important;
+}
+
+.happy-hero .botanical-badge span{
+  color:#a04459 !important;
+}
+
+.happy-hero .botanical-badge small{
+  color:#765047 !important;
+}
+
+/* THV public page content */
+.happy-hero + .section{
+  background:#fff8f1;
+}
+
+.happy-hero + .section .card{
+  background:#fffdf8;
+  border:1px solid #ead8c7;
+  box-shadow:0 12px 28px rgba(102,64,57,.08);
+}
+
+.happy-hero + .section .card-number{
+  color:#b55d6d;
+}
+
+.happy-hero + .section .card h3{
+  color:#70423e;
+}
+
+/* Membership approval section: rose/clay lounge feel instead of army green */
+.happy-hero + .section + .section-dark{
+  background:
+    radial-gradient(circle at 8% 82%,rgba(240,174,181,.16),transparent 25%),
+    linear-gradient(135deg,#805a55 0%,#93675f 55%,#725b55 100%) !important;
+}
+
+.happy-hero + .section + .section-dark .eyebrow{
+  color:#ffd1c7 !important;
+}
+
+.happy-hero + .section + .section-dark h2,
+.happy-hero + .section + .section-dark .lead{
+  color:#fff8f1 !important;
+}
+
+.approval-flow > div{
+  background:rgba(255,248,241,.1) !important;
+  border-color:rgba(255,231,218,.24) !important;
+}
+
+.approval-flow strong{
+  background:#b65d70 !important;
+  color:#fff !important;
+}
+
+.approval-flow span{
+  color:#fff7ef !important;
+}
+
+/* THV callout */
+.happy-hero ~ .section .callout-earth{
+  background:linear-gradient(135deg,#f4d9ce,#f2e2c9) !important;
+}
+
+@media(max-width:720px){
+  .happy-hero{
+    background:
+      radial-gradient(circle at 90% 10%,rgba(220,145,157,.3),transparent 28%),
+      linear-gradient(160deg,#8f5e58,#9e7066 58%,#7d6259) !important;
+  }
+}
+
+/* v23 site-wide light botanical greens */
+:root{--forest:#9caf8b;--forest-deep:#7f9874;--moss:#b3c3a1;--sage:#d7dfc9}
+.section-dark{background:radial-gradient(circle at 90% 12%,rgba(255,240,224,.34),transparent 25%),linear-gradient(135deg,#91a483 0%,#a7b595 52%,#b7bea2 100%)!important}
+.section-dark .section-heading h2,.section-dark h2{color:#fffaf5!important}
+.section-dark .eyebrow{color:#6f3442!important}
+.logo-showcase-section{background:linear-gradient(135deg,#879b7b,#a8b598)!important}
+.cannabis-partner-section{background:radial-gradient(circle at 85% 18%,rgba(245,222,200,.3),transparent 28%),linear-gradient(135deg,#829978,#9eae8e)!important}
+.cannabis-partner-copy .eyebrow{color:#713747!important}
+.cannabis-partner-copy h2,.cannabis-partner-copy p{color:#fffaf5!important}
+.photo-hero-overlay{background:linear-gradient(90deg,rgba(58,52,45,.78) 0%,rgba(91,99,77,.5) 46%,rgba(150,166,133,.18) 76%,rgba(166,181,149,.08) 100%)!important}
+.about-hero .about-hero-overlay{background:linear-gradient(90deg,rgba(55,49,43,.78) 0%,rgba(87,94,73,.48) 42%,rgba(154,170,137,.17) 72%,rgba(174,187,158,.06) 100%)!important}
+.preview-panel{background:linear-gradient(145deg,#829777,#a5b495)!important}
+.channel-row{background:rgba(255,250,245,.13)!important;border-color:rgba(255,250,245,.18)!important}
+.community-preview{background:#eef2e6!important}
+.happy-hero{background:radial-gradient(circle at 83% 18%,rgba(219,145,157,.34),transparent 27%),radial-gradient(circle at 13% 82%,rgba(202,215,185,.22),transparent 28%),linear-gradient(135deg,#96655f 0%,#a9786e 52%,#988176 100%)!important}
+.site-footer{background:#788d70!important;color:#fffaf5}
+.site-footer a,.site-footer p,.site-footer span,.site-footer small{color:#fffaf5}
+.section-dark .card{background:#fffaf5;color:#3b2f2b}
+.section-dark .card h3{color:#70423e}.section-dark .card p{color:#55443e}
+@media(max-width:720px){.section-dark{background:linear-gradient(160deg,#91a483,#a8b697)!important}}
+
+
+/* v24 unified light botanical palette + contrast pass */
+:root{
+  --forest:#a8bc98;
+  --forest-deep:#8da77f;
+  --moss:#bfd0ad;
+  --sage:#dce6d1;
+  --cream:#f8ecdc;
+  --paper:#fffaf5;
+  --ink:#352b27;
+  --charcoal:#453732;
+}
+
+/* GLOBAL BOTANICAL SURFACES */
+.section-dark,
+.logo-showcase-section,
+.cannabis-partner-section,
+.sponsorship-contribute{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(255,246,233,.52),transparent 25%),
+    linear-gradient(135deg,#b4c7a4 0%,#c4d3b5 52%,#d3dec7 100%) !important;
+  color:#352b27 !important;
+}
+
+.section-soft,
+.community-preview{
+  background:#eef4e8 !important;
+  color:#352b27 !important;
+}
+
+.story-media-section{
+  background:#f4e6d5 !important;
+  color:#352b27 !important;
+}
+
+.image-story-section,
+.mission-section{
+  background:#fffaf5 !important;
+  color:#352b27 !important;
+}
+
+.logo-showcase-section{
+  background:linear-gradient(135deg,#a9bf99,#c3d2b5) !important;
+}
+
+/* DARK TEXT ON ALL LIGHT GREEN/CREAM SECTIONS */
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p,
+.section-dark li,
+.section-dark strong,
+.section-dark span:not(.card-number),
+.logo-showcase-section h1,
+.logo-showcase-section h2,
+.logo-showcase-section h3,
+.logo-showcase-section p,
+.cannabis-partner-section h1,
+.cannabis-partner-section h2,
+.cannabis-partner-section h3,
+.cannabis-partner-section p,
+.sponsorship-contribute h1,
+.sponsorship-contribute h2,
+.sponsorship-contribute h3,
+.sponsorship-contribute p{
+  color:#352b27 !important;
+}
+
+.section-dark .eyebrow,
+.logo-showcase-section .eyebrow,
+.cannabis-partner-section .eyebrow,
+.sponsorship-contribute .eyebrow{
+  color:#7d3446 !important;
+}
+
+.section-dark .lead,
+.cannabis-partner-copy p{
+  color:#493a34 !important;
+}
+
+/* LIGHT CARDS, STRONG CONTRAST */
+.section-dark .card,
+.sponsorship-card-grid .card,
+.logo-showcase-section .real-logo-card{
+  background:#fffaf5 !important;
+  color:#352b27 !important;
+  border:1px solid #d9e1ce !important;
+  box-shadow:0 12px 28px rgba(68,77,59,.09) !important;
+}
+
+.section-dark .card h3,
+.sponsorship-card-grid .card h3{
+  color:#663743 !important;
+}
+
+.section-dark .card p,
+.sponsorship-card-grid .card p{
+  color:#453732 !important;
+}
+
+/* Partner logo area should stay readable without looking militaristic */
+.logo-showcase-section .real-logo-card{
+  background:rgba(255,250,245,.94) !important;
+}
+
+.logo-showcase-section .partner-name-card strong{
+  color:#513b35 !important;
+}
+
+/* Medical-card partner block: light botanical instead of deep green */
+.cannabis-partner-section{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(247,221,210,.45),transparent 27%),
+    linear-gradient(135deg,#b1c5a2,#ccd9c0) !important;
+}
+
+.cannabis-partner-copy h2{
+  color:#352b27 !important;
+}
+
+.cannabis-partner-copy p{
+  color:#453732 !important;
+}
+
+.cannabismd-wordmark{
+  background:#fffaf5 !important;
+  border:1px solid #d5dfca !important;
+  color:#352b27 !important;
+  box-shadow:0 14px 34px rgba(65,74,57,.1);
+}
+
+.cannabismd-wordmark strong,
+.cannabismd-wordmark small{
+  color:#352b27 !important;
+}
+
+/* Community preview */
+.preview-panel{
+  background:linear-gradient(145deg,#aec2a0,#c6d4b8) !important;
+  color:#352b27 !important;
+}
+
+.preview-panel .preview-tag,
+.preview-panel strong,
+.preview-panel small,
+.preview-panel span{
+  color:#352b27 !important;
+}
+
+.channel-row{
+  background:rgba(255,250,245,.6) !important;
+  border-color:rgba(82,100,72,.15) !important;
+}
+
+/* Footer: no remaining military green */
+.site-footer{
+  background:#b1c4a4 !important;
+  color:#352b27 !important;
+  border-top:1px solid #9fb391;
+}
+
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer strong,
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.site-footer small{
+  color:#352b27 !important;
+}
+
+/* Keep photo heroes photographic rather than green-tinted */
+.photo-hero-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(47,42,38,.74) 0%,
+    rgba(63,58,49,.47) 44%,
+    rgba(121,132,108,.12) 75%,
+    rgba(177,196,164,.04) 100%
+  ) !important;
+}
+
+.about-hero .about-hero-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(47,42,38,.74) 0%,
+    rgba(63,58,49,.45) 42%,
+    rgba(132,145,117,.1) 72%,
+    rgba(184,201,170,.03) 100%
+  ) !important;
+}
+
+/* THV is intentionally left warmer, but remove stray olive accents */
+.happy-hero + .section{
+  background:#fff9f3 !important;
+}
+
+.happy-hero + .section + .section-dark{
+  background:
+    radial-gradient(circle at 8% 82%,rgba(240,174,181,.16),transparent 25%),
+    linear-gradient(135deg,#9b7169,#ad8176) !important;
+}
+
+.happy-hero + .section + .section-dark h2,
+.happy-hero + .section + .section-dark .lead,
+.happy-hero + .section + .section-dark span{
+  color:#fff9f3 !important;
+}
+
+@media(max-width:720px){
+  .section-dark,
+  .logo-showcase-section,
+  .cannabis-partner-section,
+  .sponsorship-contribute{
+    background:linear-gradient(160deg,#b4c7a4,#d0dcc4) !important;
+  }
+}
+
+
+/* v25 real CannabisMD TeleMed logo */
+.cannabismd-logo-panel{
+  min-height:300px;
+  border-radius:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+  background:#5b4034 !important;
+  border:1px solid #4a332a !important;
+  box-shadow:0 16px 36px rgba(73,48,39,.18);
+}
+
+.cannabismd-logo-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:720px;
+  object-fit:contain;
+}
+
+@media(max-width:720px){
+  .cannabismd-logo-panel{
+    min-height:220px;
+    padding:26px;
+  }
+}
+
+
+/* v26 final readability + unified resource grid */
+.member-resource-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.member-resource-grid-secondary{
+  display:none !important;
+}
+
+/* Base text color */
+body{
+  color:#352b27 !important;
+}
+
+/* All common light surfaces should use dark readable text */
+.section,
+.section-soft,
+.mission-section,
+.story-media-section,
+.image-story-section,
+.community-preview,
+.callout-earth,
+.card,
+.shop-card,
+.coloring-download-card,
+.real-logo-card,
+.contact-form,
+.contact-details,
+.info-strip,
+.member-resource-card,
+.shared-inventory-content,
+.member-inventory-category,
+.inventory-admin-category,
+.admin-card,
+.inner-hero,
+.happy-hero + .section{
+  color:#352b27 !important;
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section p,
+.section li,
+.section strong,
+.section span:not(.eyebrow):not(.card-number):not(.resource-icon),
+.section-soft h1,
+.section-soft h2,
+.section-soft h3,
+.section-soft p,
+.section-soft li,
+.section-soft strong,
+.card h1,
+.card h2,
+.card h3,
+.card p,
+.card small,
+.shop-card h1,
+.shop-card h2,
+.shop-card h3,
+.shop-card p,
+.coloring-download-card h1,
+.coloring-download-card h2,
+.coloring-download-card h3,
+.coloring-download-card p,
+.real-logo-card p,
+.contact-form h1,
+.contact-form h2,
+.contact-form h3,
+.contact-form p,
+.contact-details h1,
+.contact-details h2,
+.contact-details h3,
+.contact-details p,
+.info-strip strong,
+.info-strip span,
+.member-resource-card strong,
+.member-resource-card small,
+.shared-inventory-content,
+.member-inventory-category h2,
+.member-inventory-category strong,
+.member-inventory-category span{
+  color:#352b27 !important;
+}
+
+/* Secondary copy gets medium-dark contrast instead of pale gray */
+.lead,
+.mission-copy p,
+.section-heading p,
+.contact-form p,
+.contact-details p,
+.card p,
+.shop-card p,
+.member-resource-card small,
+.member-inventory-items span,
+.inventory-empty-category,
+.admin-form-note,
+.shared-inventory-header p{
+  color:#54443e !important;
+}
+
+/* Keep accents visible but not washed out */
+.eyebrow,
+.text-link,
+.card-number{
+  color:#7d3446 !important;
+}
+
+/* Preserve intentionally dark/photo hero text as light */
+.photo-hero .eyebrow,
+.photo-hero h1,
+.photo-hero .lead,
+.about-hero .eyebrow,
+.about-hero h1,
+.about-hero .lead,
+.happy-hero .eyebrow,
+.happy-hero h1,
+.happy-hero .lead{
+  color:#fffaf5 !important;
+}
+
+/* Preserve dark brown CannabisMD logo panel and any text rendered within it */
+.cannabismd-logo-panel,
+.cannabismd-logo-panel *{
+  color:#fffaf5 !important;
+}
+
+/* Footer is light green now, so keep its text dark */
+.site-footer,
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer strong,
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.site-footer small{
+  color:#352b27 !important;
+}
+
+@media(max-width:680px){
+  .member-resource-grid{
+    grid-template-columns:1fr !important;
+  }
+}

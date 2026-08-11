@@ -136,14 +136,6 @@ export default async function CommunityHub() {
               <strong>Shared Inventory</strong>
             </Link>
 
-            <Link
-              className="member-resource-card member-resource-card-simple"
-              href="/the-happy-veteran/lounge-experience"
-            >
-              <span className="resource-icon">→</span>
-              <strong>Suggested Lounge Experience</strong>
-            </Link>
-
             <a
               className="member-resource-card member-resource-card-simple"
               href="https://thv-curbside-service-au-volant.netlify.app/"
@@ -163,9 +155,7 @@ export default async function CommunityHub() {
               <span className="resource-icon">↗</span>
               <strong>Delivery</strong>
             </a>
-          </div>
 
-          {/* <div className="member-resource-grid member-resource-grid-secondary">
             <Link
               className="member-resource-card member-resource-card-simple"
               href="/the-happy-veteran/lounge-experience"
@@ -173,7 +163,17 @@ export default async function CommunityHub() {
               <span className="resource-icon">→</span>
               <strong>Suggested Lounge Experience</strong>
             </Link>
-          </div> */}
+          </div>
+
+          <div className="member-resource-grid member-resource-grid-secondary">
+            <Link
+              className="member-resource-card member-resource-card-simple"
+              href="/the-happy-veteran/lounge-experience"
+            >
+              <span className="resource-icon">→</span>
+              <strong>Suggested Lounge Experience</strong>
+            </Link>
+          </div>
         </section>
 
 </main>
