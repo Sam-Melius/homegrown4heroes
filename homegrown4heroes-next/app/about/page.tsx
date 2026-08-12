@@ -3,17 +3,17 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <>
-      <section className="about-photo-hero">
+      <section className="photo-hero about-hero">
         <Image
-          className="about-photo-hero-image"
+          className="photo-hero-image"
           src="/media/soldier-pic.webp"
           alt="Veteran seated in a sunlit garden"
           fill
           priority
           sizes="100vw"
         />
-        <div className="about-photo-hero-overlay" />
-        <div className="shell about-photo-hero-content">
+        <div className="photo-hero-overlay about-hero-overlay" />
+        <div className="shell photo-hero-content about-hero-content">
           <span className="eyebrow">About Homegrown4Heroes</span>
           <h1>Healing heroes. Cultivating change.</h1>
           <p className="lead">Homegrown4Heroes is a 501(c)(3) nonprofit supporting veterans through accessible plant-based wellness, education, practical resources, and community.</p>

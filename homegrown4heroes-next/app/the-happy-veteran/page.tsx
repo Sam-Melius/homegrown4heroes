@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HappyVeteranPage() {
   return (
-    <>
+    <div className="thv-theme">
       <section className="happy-hero">
         <div className="shell happy-hero-grid">
           <div>
@@ -23,7 +23,9 @@ export default function HappyVeteranPage() {
         </div>
       </section>
 
-      <section className="section">
+      <div className="thv-tagline-strip">THV — Lynchburg&apos;s favorite living room</div>
+
+      <section className="section thv-lounge-section">
         <div className="shell">
           <div className="section-heading">
             <span className="eyebrow">The member lounge</span>
@@ -54,7 +56,7 @@ export default function HappyVeteranPage() {
         </div>
       </section>
 
-      <section className="section section-dark">
+      <section className="section section-dark thv-approval-section">
         <div className="shell split">
           <div>
             <span className="eyebrow">Membership approval</span>
@@ -73,7 +75,7 @@ export default function HappyVeteranPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section thv-consult-section">
         <div className="shell callout callout-earth">
           <div>
             <span className="eyebrow">New to The Happy Veteran?</span>
@@ -89,6 +91,6 @@ export default function HappyVeteranPage() {
           </a>
         </div>
       </section>
-    </>
+    </div>
   );
 }

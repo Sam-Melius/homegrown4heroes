@@ -47,7 +47,7 @@ export default async function SharedInventoryPage() {
   const inventory = (data || []) as InventoryCategory[];
 
   return (
-    <main className="shared-inventory-page">
+    <main className="shared-inventory-page thv-subpage-theme">
       <div className="shell shared-inventory-shell">
         <Link
           className="text-link"

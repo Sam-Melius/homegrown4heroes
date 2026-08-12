@@ -1107,16 +1107,19 @@ body{
 @media(max-width:720px){.section-dark{background:linear-gradient(160deg,#91a483,#a8b697)!important}}
 
 
-/* v24 unified light botanical palette + contrast pass */
+/* v24 unified botanical palette + contrast pass
+   Updated to the member-selected BEHR Hidden Gem green with warmer brick-red accents. */
 :root{
-  --forest:#a8bc98;
-  --forest-deep:#8da77f;
-  --moss:#bfd0ad;
-  --sage:#dce6d1;
+  --forest:#596e69;
+  --forest-deep:#465b56;
+  --moss:#8fa39d;
+  --sage:#c9d5d1;
   --cream:#f8ecdc;
   --paper:#fffaf5;
   --ink:#352b27;
   --charcoal:#453732;
+  --clay:#a55243;
+  --burgundy:#8f3f36;
 }
 
 /* GLOBAL BOTANICAL SURFACES */
@@ -1126,13 +1129,13 @@ body{
 .sponsorship-contribute{
   background:
     radial-gradient(circle at 88% 12%,rgba(255,246,233,.52),transparent 25%),
-    linear-gradient(135deg,#b4c7a4 0%,#c4d3b5 52%,#d3dec7 100%) !important;
+    linear-gradient(135deg,#aebfba 0%,#c5d1cd 52%,#dbe3e0 100%) !important;
   color:#352b27 !important;
 }
 
 .section-soft,
 .community-preview{
-  background:#eef4e8 !important;
+  background:#edf2f0 !important;
   color:#352b27 !important;
 }
 
@@ -1148,7 +1151,7 @@ body{
 }
 
 .logo-showcase-section{
-  background:linear-gradient(135deg,#a9bf99,#c3d2b5) !important;
+  background:linear-gradient(135deg,#9fb3ad,#c7d3cf) !important;
 }
 
 /* DARK TEXT ON ALL LIGHT GREEN/CREAM SECTIONS */
@@ -2543,4 +2546,229 @@ body:has(.thv-enter-theme) .site-footer *{
 }
 body:has(.thv-enter-theme) .site-footer h3{
   color:var(--thv-gold) !important;
+}
+
+/* v32: stronger Hidden Gem palette across the public Homegrown4Heroes site.
+   THV routes retain their dedicated burgundy/gold theme. */
+:root{
+  --forest:#5f746e;
+  --forest-deep:#4f6660;
+  --moss:#789088;
+  --sage:#b9cbc5;
+  --clay:#9a493d;
+  --burgundy:#8f3f35;
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .hero{
+  background:linear-gradient(125deg,#dce7e3 0%,#eef3ef 55%,#b8cbc5 100%);
+  border-bottom-color:#5f746e;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .inner-hero{
+  background:linear-gradient(120deg,#dce7e3,#b9cbc5);
+  border-bottom-color:#5f746e;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .section-dark{
+  background:#5f746e;
+  color:#fffdf8;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .section-soft,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .community-preview,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .story-media-section{
+  background:#dce7e3;
+  color:#24312d;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .program-card,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .prose-grid article{
+  background:#e5eeeb;
+  border-top-color:#9a493d;
+  color:#24312d;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .card,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .product,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .partner-card,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .signup-panel,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .download-card{
+  border-color:#a9beb7;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .button{
+  background:#5f746e;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .button:hover{
+  background:#9a493d;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .site-footer{
+  background:#405650;
+  border-top-color:#9a493d;
+}
+
+/* v33: Jennifer's selected wall green is the dominant public-site color.
+   Exact sampled color from supplied swatch: #596e69. THV keeps its own theme. */
+:root{
+  --forest:#596e69;
+  --forest-deep:#455b56;
+  --moss:#718883;
+  --sage:#c4d2ce;
+  --clay:#9b493d;
+  --burgundy:#8d3f35;
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)){
+  background:#596e69;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header{
+  background:rgba(223,232,229,.97);
+  border-bottom-color:#596e69;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .hero,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .inner-hero{
+  background:#596e69 !important;
+  color:#fffaf5;
+  border-bottom-color:#9b493d !important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .hero .eyebrow,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .inner-hero .eyebrow{
+  color:#f0c5b8;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-dark,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .logo-showcase-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .cannabis-partner-section{
+  background:#596e69 !important;
+  color:#fffaf5;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .mission-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-soft,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .community-preview,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .story-media-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .image-story-section{
+  background:#dfe8e5 !important;
+  color:#283632;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button{
+  background:#596e69;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button:hover{
+  background:#9b493d;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .photo-hero-overlay{
+  background:linear-gradient(90deg,rgba(50,72,67,.93) 0%,rgba(89,110,105,.78) 44%,rgba(89,110,105,.32) 74%,rgba(89,110,105,.16) 100%);
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-footer{
+  background:#455b56;
+  border-top-color:#9b493d;
+}
+
+/* v34: complete public-site palette reset.
+   Public Homegrown4Heroes uses ONLY wall green, brick red, earthy tans/creams.
+   All THV/lounges retain their independent burgundy/gold theme. */
+:root{
+  --public-green:#596e69;
+  --public-green-dark:#40534f;
+  --public-brick:#9b493d;
+  --public-brick-dark:#7f392f;
+  --public-tan:#d8c3a5;
+  --public-tan-light:#eee1cd;
+  --public-cream:#f7efe2;
+  --public-ink:#342b26;
+}
+
+/* Public-site canvas and chrome */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)){
+  background:var(--public-tan)!important;
+  color:var(--public-ink)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header{
+  background:var(--public-green)!important;
+  border-bottom:4px solid var(--public-brick)!important;
+  color:var(--public-cream)!important;
+  box-shadow:none!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .brand-copy strong,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .brand-copy small,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header nav{
+  color:var(--public-cream)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .menu-toggle>span:not(.sr-only){background:var(--public-cream)!important}
+
+/* Large sections: green / tan / brick instead of leftover military/white colors */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .hero,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .inner-hero,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-dark,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .logo-showcase-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .cannabis-partner-section{
+  background:var(--public-green)!important;
+  color:var(--public-cream)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .mission-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-soft,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .community-preview,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .story-media-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .image-story-section,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section:not(.section-dark){
+  background:var(--public-tan-light)!important;
+  color:var(--public-ink)!important;
+}
+
+/* Public cards/forms are earthy tan, not white/old green */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.card,.program-card,.product,.shop-card,.coloring-download-card,.real-logo-card,.endorser-card,.partner-card,.contact-form,.prose-grid article,.member-resource-card,.shop-note,.info-strip){
+  background:var(--public-cream)!important;
+  color:var(--public-ink)!important;
+  border-color:var(--public-brick)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.program-card,.feature-card,.prose-grid article){border-top-color:var(--public-brick)!important}
+
+/* Brick is the strong secondary color */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.callout,.preview-tag){
+  background:var(--public-brick)!important;
+  color:var(--public-cream)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.eyebrow,.text-link,.card a,.contact-block span){color:var(--public-brick)!important}
+
+/* Buttons alternate green/brick but stay within palette */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button{
+  background:var(--public-brick)!important;
+  color:var(--public-cream)!important;
+  border-color:var(--public-brick)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button:hover{background:var(--public-brick-dark)!important}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button-ghost{
+  background:var(--public-tan-light)!important;
+  color:var(--public-green-dark)!important;
+  border-color:var(--public-green)!important;
+}
+
+/* Footer is brick so all three theme colors have large visual presence */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-footer{
+  background:var(--public-brick)!important;
+  color:var(--public-cream)!important;
+  border-top:7px solid var(--public-green)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-footer :is(a,p,h3){color:var(--public-cream)!important}
+
+@media(max-width:900px){
+ body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header nav{
+   background:var(--public-green)!important;
+   border-bottom-color:var(--public-brick)!important;
+ }
+}
+
+/* v35: public-site header dropdowns use the brick palette. THV navigation is untouched. */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu{
+  background:var(--public-brick)!important;
+  border:1px solid var(--public-brick-dark)!important;
+  color:var(--public-cream)!important;
+  box-shadow:0 16px 30px rgba(52,43,38,.22)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu a{
+  color:var(--public-cream)!important;
+}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu a:hover{
+  background:var(--public-tan)!important;
+  color:var(--public-ink)!important;
+}
+@media(max-width:900px){
+  body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu{
+    background:var(--public-brick)!important;
+    border-left:4px solid var(--public-tan)!important;
+    padding:8px 12px!important;
+  }
 }

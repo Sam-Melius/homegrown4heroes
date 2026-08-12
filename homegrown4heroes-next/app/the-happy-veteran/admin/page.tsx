@@ -105,7 +105,7 @@ export default async function AdminPage() {
   }).format(new Date(`${today}T12:00:00`));
 
   return (
-    <main className="admin-page">
+    <main className="admin-page thv-admin-theme">
       <div className="shell admin-shell">
         <header className="admin-header">
           <div>

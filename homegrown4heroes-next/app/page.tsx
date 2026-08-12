@@ -69,7 +69,7 @@ export default function HomePage() {
         <div className="shell preview-grid">
           <div className="preview-panel">
             <span className="preview-tag">Private member space</span>
-            <div className="channel-row"><span>#</span><div><strong>today&apos;s-menu</strong><small>See what is available today</small></div></div>
+            <div className="channel-row"><span>#</span><div><strong>shares</strong><small>See today’s available shares</small></div></div>
             <div className="channel-row"><span>#</span><div><strong>community</strong><small>Connect with verified members</small></div></div>
             <div className="channel-row"><span>#</span><div><strong>announcements</strong><small>Updates from Homegrown4Heroes</small></div></div>
           </div>
