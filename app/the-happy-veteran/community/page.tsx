@@ -63,7 +63,7 @@ export default async function CommunityHub() {
   }).format(new Date(`${today}T12:00:00`));
 
   return (
-    <main className="member-app">
+    <main className="member-app thv-member-theme">
       <header className="member-topbar">
         <div className="member-identity">
           <span className="eyebrow">Homegrown community</span>
@@ -156,16 +156,6 @@ export default async function CommunityHub() {
               <strong>Delivery</strong>
             </a>
 
-            <Link
-              className="member-resource-card member-resource-card-simple"
-              href="/the-happy-veteran/lounge-experience"
-            >
-              <span className="resource-icon">→</span>
-              <strong>Suggested Lounge Experience</strong>
-            </Link>
-          </div>
-
-          <div className="member-resource-grid member-resource-grid-secondary">
             <Link
               className="member-resource-card member-resource-card-simple"
               href="/the-happy-veteran/lounge-experience"

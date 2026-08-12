@@ -32,7 +32,7 @@ export default async function LoungeExperiencePage() {
   ]);
 
   return (
-    <main className="lounge-experience-page">
+    <main className="lounge-experience-page thv-subpage-theme thv-experience-theme">
       <div className="shell lounge-experience-shell">
         <Link className="text-link lounge-back-link" href="/the-happy-veteran/community">
           ← Back to The Happy Veteran
