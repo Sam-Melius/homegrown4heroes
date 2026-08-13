@@ -1,3 +1,5 @@
+/* CLEANED GLOBALS.CSS — consolidated after iterative client revisions */
+
 :root{--ink:#171a15;--charcoal:#23251f;--forest:#33452f;--forest-deep:#1e2b1e;--moss:#6f7d4f;--sage:#a5ad89;--cream:#eee7d7;--paper:#f8f4e9;--soil:#4a2d20;--clay:#9b563c;--burgundy:#780d1a;--gold:#b7a064;--line:#d6ccba;--shadow:0 24px 60px rgba(20,25,18,.18)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.shell{width:min(1160px,calc(100% - 36px));margin:auto}.narrow{width:min(780px,calc(100% - 36px))}.sr-only,.skip-link{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link:focus{width:auto;height:auto;clip:auto;left:16px;top:16px;background:white;padding:10px;z-index:99}.crisis-bar{display:flex;justify-content:center;gap:12px;padding:8px 16px;background:#090a08;color:white;font-size:.86rem}.crisis-bar a{text-decoration:underline;font-weight:800}.site-header{position:sticky;top:0;z-index:20;background:rgba(248,244,233,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(74,45,32,.18)}.nav-wrap{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:7px}.brand img{width:68px;height:68px;object-fit:contain}.brand-copy strong,.brand-copy small{display:block;line-height:1}.brand-copy strong{font-family:Georgia,serif;font-size:1.08rem}.brand-copy small{margin-top:5px;letter-spacing:.17em;text-transform:uppercase;font-size:.66rem;font-weight:800}.site-header nav{display:flex;align-items:center;gap:20px;font-size:.92rem;font-weight:700}.site-header nav>a:not(.button):hover{color:var(--clay)}.menu-toggle{display:none;background:none;border:0;width:42px;height:42px;padding:9px}.menu-toggle>span:not(.sr-only){display:block;height:2px;background:var(--ink);margin:5px 0}.button{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:3px;padding:13px 20px;background:var(--forest);color:white;font-weight:800;cursor:pointer;text-transform:uppercase;letter-spacing:.045em;font-size:.82rem;box-shadow:4px 4px 0 rgba(23,26,21,.18);transition:transform .2s,background .2s}.button:hover{background:var(--clay);transform:translate(-1px,-1px)}.button:disabled{cursor:not-allowed;opacity:.7}.button-small{padding:10px 14px}.button-ghost{background:transparent;color:var(--forest-deep);border-color:var(--forest-deep);box-shadow:none}.button-light{background:var(--cream);color:var(--forest-deep)}.button-full{width:100%}.hero{position:relative;overflow:hidden;padding:72px 0 78px;background:linear-gradient(125deg,#e9e0cc 0%,#f6f0e3 56%,#c8c3a9 100%);border-bottom:8px solid var(--forest-deep)}.hero:after{content:"";position:absolute;inset:0;opacity:.22;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent 0 5px,rgba(45,39,27,.12) 6px,transparent 7px)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}.hero-copy{padding:28px 0}.eyebrow{display:block;margin-bottom:13px;color:var(--clay);font-weight:900;text-transform:uppercase;letter-spacing:.18em;font-size:.75rem}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.08;margin:0 0 17px}h1{font-size:clamp(2.85rem,6.7vw,5.8rem);letter-spacing:-.045em}h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.025em}h3{font-size:1.55rem}.lead{font-size:1.15rem;max-width:62ch}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.hero-logo-wrap{position:relative;display:grid;place-items:center;min-height:500px}.logo-halo{position:absolute;width:92%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d7cdb7 0 48%,transparent 49%),repeating-radial-gradient(circle,transparent 0 18px,rgba(51,69,47,.12) 19px 21px);filter:drop-shadow(0 22px 22px rgba(34,31,22,.18))}.hero-logo{position:relative;width:min(100%,580px);height:auto;filter:drop-shadow(0 22px 16px rgba(20,20,15,.26))}.section{padding:90px 0}.mission-section{background:var(--paper)}.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}.mission-copy p{font-size:1.17rem;margin-top:5px}.text-link{display:inline-flex;gap:9px;color:var(--clay);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;margin-top:10px}.section-dark{background:var(--forest-deep);color:var(--paper);position:relative}.section-dark:before{content:"";position:absolute;inset:0;opacity:.07;background-image:linear-gradient(45deg,#fff 25%,transparent 25%),linear-gradient(-45deg,#fff 25%,transparent 25%);background-size:14px 14px}.section-dark .shell{position:relative}.section-dark .eyebrow{color:#d7b78c}.section-heading{margin-bottom:38px}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.product,.login-card,.contact-form{background:#fff;border:1px solid var(--line);border-radius:4px;padding:29px;box-shadow:8px 8px 0 rgba(23,26,21,.13)}.program-card{background:#f2ecdd;color:var(--ink);border-top:6px solid var(--clay)}.card-number,.number-stamp{color:var(--moss);font-weight:900;letter-spacing:.12em}.card a{font-weight:900;color:var(--clay);text-transform:uppercase;letter-spacing:.05em;font-size:.78rem}.community-preview{background:#d8d0bc}.preview-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:68px;align-items:center}.preview-panel{background:var(--charcoal);color:white;padding:30px;border:1px solid #42483c;box-shadow:14px 14px 0 var(--clay)}.preview-tag{display:inline-block;background:var(--burgundy);color:white;padding:5px 9px;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900;margin-bottom:20px}.channel-row{display:flex;gap:14px;align-items:center;border-top:1px solid rgba(255,255,255,.12);padding:17px 4px}.channel-row>span{font-size:1.35rem;color:var(--sage)}.channel-row strong,.channel-row small{display:block}.channel-row small{color:#bfc4b9}.callout{display:flex;align-items:center;justify-content:space-between;gap:30px;background:var(--burgundy);color:white;padding:44px;border-left:10px solid var(--gold);box-shadow:12px 12px 0 var(--forest-deep)}.callout .eyebrow{color:#ead2a3}.callout-earth{background:var(--soil)}.inner-hero{padding:68px 0;background:linear-gradient(120deg,#e8dfcc,#c9c1aa);border-bottom:7px solid var(--forest-deep)}.inner-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px}.inner-hero-grid img{width:min(100%,390px);height:auto;justify-self:center;filter:drop-shadow(0 18px 14px rgba(0,0,0,.2))}.inner-hero-short{min-height:390px;display:flex;align-items:center}.prose-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px}.prose-grid article{padding:34px;border-top:6px solid var(--clay);background:#efe8d8}.program-page-grid{grid-template-columns:repeat(2,1fr)}.feature-card{border-top:6px solid var(--forest);min-height:260px}.center-action{text-align:center;margin-top:42px}.section-soft{background:var(--cream)}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{padding:20px}.product-image{aspect-ratio:4/3;display:grid;place-items:center;background:var(--forest-deep);margin-bottom:20px;color:white}.product-image span{font-family:Georgia,serif;font-size:3rem;color:var(--sage)}.product-image small{display:block}.shop-note{margin-top:30px;padding:20px;border-left:5px solid var(--clay);background:#fff}.contact-details{padding-right:30px}.contact-block{margin-top:38px;border-top:1px solid var(--line);padding-top:22px}.contact-block span,.contact-block a{display:block}.contact-block span{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:900;color:var(--clay)}.contact-block a{font-weight:800}.login-card label,.contact-form label{display:grid;gap:7px;margin-bottom:16px;font-weight:800}.login-card input,.contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border:1px solid #aaa08f;border-radius:2px;background:var(--paper)}.form-note{font-size:.88rem;color:#68685f}.community-page{padding:76px 0 92px;background:linear-gradient(120deg,var(--forest-deep),#11170f);color:white;min-height:72vh}.community-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.community-intro .eyebrow{color:#d3bd8e}.approval-steps{margin-top:35px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.approval-steps div{display:flex;gap:12px;align-items:center;border:1px solid rgba(255,255,255,.15);padding:13px}.approval-steps strong{display:grid;place-items:center;width:30px;height:30px;background:var(--clay)}.login-card{color:var(--ink);box-shadow:14px 14px 0 var(--clay)}.login-card hr{border:0;border-top:1px solid var(--line);margin:24px 0}.login-card a{color:var(--clay);font-weight:800}.site-footer{background:#11130f;color:#f7f3e9;padding:56px 0 20px;border-top:7px solid var(--clay)}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px}.footer-brand{display:grid;grid-template-columns:130px 1fr;align-items:center}.footer-brand img{width:120px;height:120px;object-fit:contain}.footer-grid a,.footer-grid p{display:block;color:#cfd2c8;margin:8px 0}.footer-grid h3{font-size:1.1rem}.footer-bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:.88rem;color:#aaafa6}
 @media(max-width:900px){.menu-toggle{display:block}.site-header nav{display:none;position:absolute;left:0;right:0;top:86px;background:var(--paper);padding:22px 18px 28px;border-bottom:2px solid var(--forest-deep);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 20px 30px rgba(0,0,0,.15)}.site-header nav.nav-open{display:flex}.site-header nav a{padding:11px 6px;border-bottom:1px solid var(--line)}.site-header nav .button{margin-top:12px}.hero{padding:48px 0 64px}.hero-grid,.split,.preview-grid,.inner-hero-grid,.community-layout,.prose-grid,.contact-grid{grid-template-columns:1fr}.hero-logo-wrap{min-height:350px;order:-1}.hero-logo{width:min(90%,430px)}.card-grid{grid-template-columns:1fr}.program-page-grid{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.callout{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.inner-hero-grid img{display:none}}
@@ -593,91 +595,31 @@ h3,
 }
 
 
-/* v18 client design direction: warmer botanical social-club aesthetic */
-:root{--ink:#2d241f;--charcoal:#3a302a;--forest:#536447;--forest-deep:#34452f;--moss:#7d8b64;--sage:#b8bea1;--cream:#f3e6d0;--paper:#fffaf1;--soil:#5c3b32;--clay:#b86755;--burgundy:#8f3340;--gold:#c59a68;--line:#dfcfba;--shadow:0 22px 50px rgba(72,48,38,.13);--site-font:"Trebuchet MS","Avenir Next",Avenir,Arial,sans-serif}
-body{background:var(--paper);color:var(--ink)}
-h1,h2,h3,h4,h5,h6{font-family:var(--site-font)!important;font-weight:800;letter-spacing:-.035em}
-.eyebrow{color:var(--burgundy);letter-spacing:.14em}.section-dark{background:#48533f!important}.section-soft{background:#f4eadb!important}
-.site-header{background:rgba(255,250,241,.97);border-bottom:1px solid #e6d4bd;box-shadow:0 8px 24px rgba(83,56,44,.06)}
-.nav-wrap{min-height:96px}.brand{gap:12px}.brand img{width:64px;height:64px}
-.brand-copy strong{font-size:1rem;letter-spacing:.005em!important;color:var(--soil)}
-.brand-copy small{margin-top:7px;color:var(--burgundy);letter-spacing:.09em;font-size:.58rem;text-transform:none}
-.site-header nav{font-weight:700;color:#4b3c34}.site-header nav>a:not(.button):hover,.nav-dropdown-toggle:hover{color:var(--burgundy)}
-.button{border-radius:999px;background:var(--burgundy);box-shadow:none;padding:13px 22px;letter-spacing:.035em}.button:hover{background:var(--soil);transform:translateY(-1px)}
-.button-ghost{color:var(--burgundy);border-color:var(--burgundy);background:rgba(255,255,255,.5)}
-.button-membership{background:#fff4e5;color:#5b2530;border:2px solid #fff4e5;box-shadow:0 5px 16px rgba(0,0,0,.12)}.button-membership:hover{background:#fff;color:#5b2530}
-.card,.member-resource-card,.shop-card,.coloring-download-card{border-radius:18px;box-shadow:0 10px 28px rgba(78,54,43,.09)}
-.photo-hero-overlay{background:linear-gradient(90deg,rgba(50,59,42,.88) 0%,rgba(63,68,48,.67) 46%,rgba(85,65,54,.24) 76%,rgba(85,65,54,.12) 100%)}
-.photo-hero-content .eyebrow{color:#f0c5b1}.story-media-section{background:#f0dfc8}.image-story-section{background:#fffaf1}.logo-showcase-section{background:#624238}.callout-earth{background:#ead3bd!important}
-.happy-hero{background:radial-gradient(circle at 88% 18%,rgba(185,103,85,.25),transparent 25%),radial-gradient(circle at 8% 80%,rgba(197,154,104,.22),transparent 27%),linear-gradient(135deg,#485a43,#6d5147)!important}
-.happy-hero .eyebrow{color:#f0c5b1}.happy-mark{border-radius:50% 50% 46% 54%;background:#f3e6d0!important;color:#6f2d39!important;box-shadow:18px 18px 0 rgba(143,51,64,.18)!important}.happy-mark small{color:#6b4a3e!important}
-.inner-hero{background:radial-gradient(circle at 82% 20%,rgba(184,103,85,.15),transparent 23%),linear-gradient(135deg,#f5e8d3,#fffaf1 55%,#e7d6c1)!important;border-bottom-color:var(--burgundy)!important}
-.info-strip{border-radius:18px;overflow:hidden}.info-strip strong{color:var(--burgundy)}
-.partner-name-card strong{font-size:1.45rem;color:#fff7ea;text-align:center}
-.cannabis-partner-section{background:#3f4939;color:#fffaf1}.cannabis-partner-card{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:center}
-.cannabismd-wordmark{min-height:300px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:20px;padding:36px;background:#171b16;border:1px solid rgba(255,255,255,.12)}
-.cannabismd-leaf{font-size:4rem;color:#a9bd67}.cannabismd-wordmark strong{display:block;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.02em}.cannabismd-wordmark strong span{color:#a9bd67}.cannabismd-wordmark small{display:block;text-align:center;font-size:1.2rem;letter-spacing:.18em}
-.cannabis-partner-copy .eyebrow{color:#efb6a4}.cannabis-partner-copy p{color:#f3eadf}.member-resource-card-simple{border-radius:18px}.resource-icon{background:var(--burgundy)}
-@media(max-width:900px){.cannabis-partner-card{grid-template-columns:1fr}}@media(max-width:680px){.brand-copy small{display:none}.brand-copy strong{font-size:.9rem}}
 
-
-/* v19 supplied partner + veteran assets */
-.about-soldier-image{
-  overflow:hidden;
-  border-radius:28px;
-  box-shadow:0 18px 42px rgba(66,45,35,.16);
-  min-height:360px;
-}
-.about-soldier-image img{
-  display:block;
-  width:100%;
-  height:100%;
-  min-height:360px;
-  object-fit:cover;
-  object-position:center;
-}
-.logo-showcase-section .real-logo-card{
-  min-height:190px;
-}
-.logo-showcase-section .real-logo-card img{
-  max-width:88%;
-  max-height:135px;
-  object-fit:contain;
-}
-@media(max-width:720px){
-  .about-soldier-image,
-  .about-soldier-image img{
-    min-height:280px;
-  }
-}
-
-
-/* v20 softer botanical / social-club refinement */
-:root{
-  --ink:#3b2f2b;
-  --charcoal:#4b3c37;
-  --forest:#6f7d5d;
-  --forest-deep:#536347;
-  --moss:#96a37b;
-  --sage:#c9cfb7;
-  --cream:#f7ead8;
-  --paper:#fffaf5;
-  --soil:#6b4a40;
-  --clay:#c77f70;
-  --burgundy:#a44d5e;
-  --gold:#d7ad79;
-  --line:#e8d6c4;
-  --site-font:"Avenir Next","Segoe UI",Arial,sans-serif;
-}
-
-html,body,button,input,textarea,select,
-.site-header,.site-footer,.card,.admin-page,.community-board,
-.shared-inventory-page,.lounge-experience-page{
+/* CURRENT GLOBAL REFINEMENTS
+   Consolidated from the old v18-v24 override layers. */
+html,
+body,
+button,
+input,
+textarea,
+select,
+.site-header,
+.site-footer,
+.card,
+.product,
+.admin-page,
+.community-board,
+.shared-inventory-page,
+.lounge-experience-page{
   font-family:var(--site-font)!important;
 }
 
 h1,h2,h3,h4,h5,h6,
-.brand-copy strong,.brand-copy small,.button,.eyebrow{
+.brand-copy strong,
+.brand-copy small,
+.button,
+.eyebrow{
   font-family:var(--site-font)!important;
 }
 
@@ -686,30 +628,19 @@ h1,h2,h3{
   letter-spacing:-.025em!important;
 }
 
-body{
-  background:#fffaf5;
-  color:#3b2f2b;
-}
-
+/* Botanical decoration retained on main-site green sections. */
 .section-dark{
   position:relative;
   overflow:hidden;
-  background:linear-gradient(135deg,#68765a,#7a6259)!important;
 }
-
 .section-dark::before,
-.section-dark::after,
-.happy-hero::before,
-.happy-hero::after{
+.section-dark::after{
   content:"";
   position:absolute;
   pointer-events:none;
   opacity:.18;
-  filter:blur(.2px);
 }
-
-.section-dark::before,
-.happy-hero::before{
+.section-dark::before{
   width:180px;
   height:180px;
   left:-45px;
@@ -721,9 +652,7 @@ body{
     radial-gradient(circle at 18% 50%,#dc7486 0 17%,transparent 18%),
     radial-gradient(circle at 50% 50%,#c7a16f 0 18%,transparent 19%);
 }
-
-.section-dark::after,
-.happy-hero::after{
+.section-dark::after{
   width:145px;
   height:145px;
   right:-25px;
@@ -735,154 +664,37 @@ body{
     radial-gradient(circle at 18% 50%,#e36f7e 0 16%,transparent 17%),
     radial-gradient(circle at 50% 50%,#c9a66c 0 17%,transparent 18%);
 }
-
-.section-dark>.shell,
-.happy-hero>.shell{
+.section-dark>.shell{
   position:relative;
   z-index:1;
 }
 
-.about-photo-hero{
-  position:relative;
-  min-height:640px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  background:#4e5946;
-}
-
-.about-photo-hero-image{
-  object-fit:cover;
-  object-position:center 48%;
-}
-
-.about-photo-hero-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(54,48,42,.88) 0%,rgba(62,54,46,.65) 42%,rgba(56,64,49,.25) 72%,rgba(56,64,49,.1) 100%);
-}
-
-.about-photo-hero-content{
-  position:relative;
-  z-index:1;
-  color:#fffaf5;
-  padding-top:92px;
-  padding-bottom:92px;
-}
-
-.about-photo-hero-content h1{
-  max-width:720px;
-  color:#fffaf5;
-  text-shadow:0 5px 30px rgba(0,0,0,.25);
-}
-
-.about-photo-hero-content .lead{
-  max-width:660px;
-  color:#fff7ed;
-  text-shadow:0 2px 14px rgba(0,0,0,.24);
-}
-
-.about-photo-hero-content .eyebrow{
-  color:#f3b8b6;
-}
-
-.sponsorship-contribute{
-  background:linear-gradient(135deg,#667458,#7b6259)!important;
-}
-
-.sponsorship-contribute .section-heading h2{
-  color:#fffaf5!important;
-}
-
-.sponsorship-contribute .eyebrow{
-  color:#f4beb5!important;
-}
-
-.sponsorship-card-grid .card{
-  background:#fff9f0!important;
-  border:1px solid #ead7c4!important;
-  color:#3b2f2b!important;
-}
-
-.sponsorship-card-grid .card h3{
-  color:#7d3f4d!important;
-}
-
-.sponsorship-card-grid .card p{
-  color:#54443d!important;
-}
-
-.happy-hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 75% 20%,rgba(224,142,153,.22),transparent 24%),
-    linear-gradient(135deg,#718061,#8b7065)!important;
-}
-
-.thv-tagline{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 13px;
-  border-radius:999px;
-  background:rgba(255,250,245,.12);
-  border:1px solid rgba(255,250,245,.24);
-  color:#ffe6db!important;
-}
-
-.botanical-badge{
-  border-radius:42% 58% 55% 45% / 48% 42% 58% 52%!important;
-  background:#fff3df!important;
-  border:3px solid rgba(164,77,94,.24);
-}
-
-.botanical-badge span{
-  color:#a44d5e!important;
-}
-
-.botanical-badge small{
-  color:#6a5048!important;
-  max-width:170px;
-  text-align:center;
-}
-
-.card{
+.card,
+.member-resource-card,
+.shop-card,
+.coloring-download-card{
   border-radius:22px;
 }
-
 .button{
   border-radius:999px;
 }
-
 .callout-earth{
-  background:linear-gradient(135deg,#f1d8c8,#efe3cb)!important;
   border-radius:26px;
 }
-
 .info-strip{
-  background:#fff7ed;
   box-shadow:0 12px 30px rgba(87,57,48,.07);
 }
 
-@media(max-width:720px){
-  .about-photo-hero{
-    min-height:560px;
-    align-items:end;
-  }
-  .about-photo-hero-image{
-    object-position:62% center;
-  }
-  .about-photo-hero-overlay{
-    background:linear-gradient(180deg,rgba(53,49,44,.2) 0%,rgba(53,49,44,.82) 67%,rgba(53,49,44,.94) 100%);
-  }
-  .about-photo-hero-content{
-    padding-top:180px;
-    padding-bottom:58px;
-  }
+/* CannabisMD layout retained; visual colors come from the current public theme. */
+.cannabis-partner-card{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:60px;
+  align-items:center;
 }
-
+@media(max-width:900px){
+  .cannabis-partner-card{grid-template-columns:1fr}
+}
 
 /* v21 exact hero behavior + sponsorship readability */
 .about-hero{
@@ -970,365 +782,6 @@ body{
 }
 
 
-/* v22 The Happy Veteran: warm lounge / botanical palette, less military */
-.happy-hero{
-  background:
-    radial-gradient(circle at 83% 18%,rgba(219,145,157,.34),transparent 27%),
-    radial-gradient(circle at 13% 82%,rgba(218,176,125,.22),transparent 28%),
-    linear-gradient(135deg,#8f5e58 0%,#a87369 48%,#80665c 100%) !important;
-}
-
-.happy-hero::before,
-.happy-hero::after{
-  opacity:.28;
-}
-
-.happy-hero h1,
-.happy-hero .lead{
-  color:#fffaf5 !important;
-}
-
-.happy-hero .thv-tagline{
-  color:#fff0e8 !important;
-  background:rgba(255,248,239,.13);
-  border-color:rgba(255,240,232,.3);
-}
-
-.happy-hero .button{
-  background:#9d4055;
-  color:#fffaf5;
-}
-
-.happy-hero .button:hover{
-  background:#7f3445;
-}
-
-.happy-hero .button-membership{
-  background:#fff0df !important;
-  color:#783647 !important;
-  border-color:#fff0df !important;
-}
-
-.happy-hero .botanical-badge{
-  background:#fff0df !important;
-  border-color:rgba(157,64,85,.28);
-  box-shadow:18px 18px 0 rgba(109,57,62,.16) !important;
-}
-
-.happy-hero .botanical-badge span{
-  color:#a04459 !important;
-}
-
-.happy-hero .botanical-badge small{
-  color:#765047 !important;
-}
-
-/* THV public page content */
-.happy-hero + .section{
-  background:#fff8f1;
-}
-
-.happy-hero + .section .card{
-  background:#fffdf8;
-  border:1px solid #ead8c7;
-  box-shadow:0 12px 28px rgba(102,64,57,.08);
-}
-
-.happy-hero + .section .card-number{
-  color:#b55d6d;
-}
-
-.happy-hero + .section .card h3{
-  color:#70423e;
-}
-
-/* Membership approval section: rose/clay lounge feel instead of army green */
-.happy-hero + .section + .section-dark{
-  background:
-    radial-gradient(circle at 8% 82%,rgba(240,174,181,.16),transparent 25%),
-    linear-gradient(135deg,#805a55 0%,#93675f 55%,#725b55 100%) !important;
-}
-
-.happy-hero + .section + .section-dark .eyebrow{
-  color:#ffd1c7 !important;
-}
-
-.happy-hero + .section + .section-dark h2,
-.happy-hero + .section + .section-dark .lead{
-  color:#fff8f1 !important;
-}
-
-.approval-flow > div{
-  background:rgba(255,248,241,.1) !important;
-  border-color:rgba(255,231,218,.24) !important;
-}
-
-.approval-flow strong{
-  background:#b65d70 !important;
-  color:#fff !important;
-}
-
-.approval-flow span{
-  color:#fff7ef !important;
-}
-
-/* THV callout */
-.happy-hero ~ .section .callout-earth{
-  background:linear-gradient(135deg,#f4d9ce,#f2e2c9) !important;
-}
-
-@media(max-width:720px){
-  .happy-hero{
-    background:
-      radial-gradient(circle at 90% 10%,rgba(220,145,157,.3),transparent 28%),
-      linear-gradient(160deg,#8f5e58,#9e7066 58%,#7d6259) !important;
-  }
-}
-
-/* v23 site-wide light botanical greens */
-:root{--forest:#9caf8b;--forest-deep:#7f9874;--moss:#b3c3a1;--sage:#d7dfc9}
-.section-dark{background:radial-gradient(circle at 90% 12%,rgba(255,240,224,.34),transparent 25%),linear-gradient(135deg,#91a483 0%,#a7b595 52%,#b7bea2 100%)!important}
-.section-dark .section-heading h2,.section-dark h2{color:#fffaf5!important}
-.section-dark .eyebrow{color:#6f3442!important}
-.logo-showcase-section{background:linear-gradient(135deg,#879b7b,#a8b598)!important}
-.cannabis-partner-section{background:radial-gradient(circle at 85% 18%,rgba(245,222,200,.3),transparent 28%),linear-gradient(135deg,#829978,#9eae8e)!important}
-.cannabis-partner-copy .eyebrow{color:#713747!important}
-.cannabis-partner-copy h2,.cannabis-partner-copy p{color:#fffaf5!important}
-.photo-hero-overlay{background:linear-gradient(90deg,rgba(58,52,45,.78) 0%,rgba(91,99,77,.5) 46%,rgba(150,166,133,.18) 76%,rgba(166,181,149,.08) 100%)!important}
-.about-hero .about-hero-overlay{background:linear-gradient(90deg,rgba(55,49,43,.78) 0%,rgba(87,94,73,.48) 42%,rgba(154,170,137,.17) 72%,rgba(174,187,158,.06) 100%)!important}
-.preview-panel{background:linear-gradient(145deg,#829777,#a5b495)!important}
-.channel-row{background:rgba(255,250,245,.13)!important;border-color:rgba(255,250,245,.18)!important}
-.community-preview{background:#eef2e6!important}
-.happy-hero{background:radial-gradient(circle at 83% 18%,rgba(219,145,157,.34),transparent 27%),radial-gradient(circle at 13% 82%,rgba(202,215,185,.22),transparent 28%),linear-gradient(135deg,#96655f 0%,#a9786e 52%,#988176 100%)!important}
-.site-footer{background:#788d70!important;color:#fffaf5}
-.site-footer a,.site-footer p,.site-footer span,.site-footer small{color:#fffaf5}
-.section-dark .card{background:#fffaf5;color:#3b2f2b}
-.section-dark .card h3{color:#70423e}.section-dark .card p{color:#55443e}
-@media(max-width:720px){.section-dark{background:linear-gradient(160deg,#91a483,#a8b697)!important}}
-
-
-/* v24 unified botanical palette + contrast pass
-   Updated to the member-selected BEHR Hidden Gem green with warmer brick-red accents. */
-:root{
-  --forest:#596e69;
-  --forest-deep:#465b56;
-  --moss:#8fa39d;
-  --sage:#c9d5d1;
-  --cream:#f8ecdc;
-  --paper:#fffaf5;
-  --ink:#352b27;
-  --charcoal:#453732;
-  --clay:#a55243;
-  --burgundy:#8f3f36;
-}
-
-/* GLOBAL BOTANICAL SURFACES */
-.section-dark,
-.logo-showcase-section,
-.cannabis-partner-section,
-.sponsorship-contribute{
-  background:
-    radial-gradient(circle at 88% 12%,rgba(255,246,233,.52),transparent 25%),
-    linear-gradient(135deg,#aebfba 0%,#c5d1cd 52%,#dbe3e0 100%) !important;
-  color:#352b27 !important;
-}
-
-.section-soft,
-.community-preview{
-  background:#edf2f0 !important;
-  color:#352b27 !important;
-}
-
-.story-media-section{
-  background:#f4e6d5 !important;
-  color:#352b27 !important;
-}
-
-.image-story-section,
-.mission-section{
-  background:#fffaf5 !important;
-  color:#352b27 !important;
-}
-
-.logo-showcase-section{
-  background:linear-gradient(135deg,#9fb3ad,#c7d3cf) !important;
-}
-
-/* DARK TEXT ON ALL LIGHT GREEN/CREAM SECTIONS */
-.section-dark h1,
-.section-dark h2,
-.section-dark h3,
-.section-dark h4,
-.section-dark p,
-.section-dark li,
-.section-dark strong,
-.section-dark span:not(.card-number),
-.logo-showcase-section h1,
-.logo-showcase-section h2,
-.logo-showcase-section h3,
-.logo-showcase-section p,
-.cannabis-partner-section h1,
-.cannabis-partner-section h2,
-.cannabis-partner-section h3,
-.cannabis-partner-section p,
-.sponsorship-contribute h1,
-.sponsorship-contribute h2,
-.sponsorship-contribute h3,
-.sponsorship-contribute p{
-  color:#352b27 !important;
-}
-
-.section-dark .eyebrow,
-.logo-showcase-section .eyebrow,
-.cannabis-partner-section .eyebrow,
-.sponsorship-contribute .eyebrow{
-  color:#7d3446 !important;
-}
-
-.section-dark .lead,
-.cannabis-partner-copy p{
-  color:#493a34 !important;
-}
-
-/* LIGHT CARDS, STRONG CONTRAST */
-.section-dark .card,
-.sponsorship-card-grid .card,
-.logo-showcase-section .real-logo-card{
-  background:#fffaf5 !important;
-  color:#352b27 !important;
-  border:1px solid #d9e1ce !important;
-  box-shadow:0 12px 28px rgba(68,77,59,.09) !important;
-}
-
-.section-dark .card h3,
-.sponsorship-card-grid .card h3{
-  color:#663743 !important;
-}
-
-.section-dark .card p,
-.sponsorship-card-grid .card p{
-  color:#453732 !important;
-}
-
-/* Partner logo area should stay readable without looking militaristic */
-.logo-showcase-section .real-logo-card{
-  background:rgba(255,250,245,.94) !important;
-}
-
-.logo-showcase-section .partner-name-card strong{
-  color:#513b35 !important;
-}
-
-/* Medical-card partner block: light botanical instead of deep green */
-.cannabis-partner-section{
-  background:
-    radial-gradient(circle at 86% 18%,rgba(247,221,210,.45),transparent 27%),
-    linear-gradient(135deg,#b1c5a2,#ccd9c0) !important;
-}
-
-.cannabis-partner-copy h2{
-  color:#352b27 !important;
-}
-
-.cannabis-partner-copy p{
-  color:#453732 !important;
-}
-
-.cannabismd-wordmark{
-  background:#fffaf5 !important;
-  border:1px solid #d5dfca !important;
-  color:#352b27 !important;
-  box-shadow:0 14px 34px rgba(65,74,57,.1);
-}
-
-.cannabismd-wordmark strong,
-.cannabismd-wordmark small{
-  color:#352b27 !important;
-}
-
-/* Community preview */
-.preview-panel{
-  background:linear-gradient(145deg,#aec2a0,#c6d4b8) !important;
-  color:#352b27 !important;
-}
-
-.preview-panel .preview-tag,
-.preview-panel strong,
-.preview-panel small,
-.preview-panel span{
-  color:#352b27 !important;
-}
-
-.channel-row{
-  background:rgba(255,250,245,.6) !important;
-  border-color:rgba(82,100,72,.15) !important;
-}
-
-/* Footer: no remaining military green */
-.site-footer{
-  background:#b1c4a4 !important;
-  color:#352b27 !important;
-  border-top:1px solid #9fb391;
-}
-
-.site-footer h1,
-.site-footer h2,
-.site-footer h3,
-.site-footer strong,
-.site-footer a,
-.site-footer p,
-.site-footer span,
-.site-footer small{
-  color:#352b27 !important;
-}
-
-/* Keep photo heroes photographic rather than green-tinted */
-.photo-hero-overlay{
-  background:linear-gradient(
-    90deg,
-    rgba(47,42,38,.74) 0%,
-    rgba(63,58,49,.47) 44%,
-    rgba(121,132,108,.12) 75%,
-    rgba(177,196,164,.04) 100%
-  ) !important;
-}
-
-.about-hero .about-hero-overlay{
-  background:linear-gradient(
-    90deg,
-    rgba(47,42,38,.74) 0%,
-    rgba(63,58,49,.45) 42%,
-    rgba(132,145,117,.1) 72%,
-    rgba(184,201,170,.03) 100%
-  ) !important;
-}
-
-/* THV is intentionally left warmer, but remove stray olive accents */
-.happy-hero + .section{
-  background:#fff9f3 !important;
-}
-
-.happy-hero + .section + .section-dark{
-  background:
-    radial-gradient(circle at 8% 82%,rgba(240,174,181,.16),transparent 25%),
-    linear-gradient(135deg,#9b7169,#ad8176) !important;
-}
-
-.happy-hero + .section + .section-dark h2,
-.happy-hero + .section + .section-dark .lead,
-.happy-hero + .section + .section-dark span{
-  color:#fff9f3 !important;
-}
-
-@media(max-width:720px){
-  .section-dark,
-  .logo-showcase-section,
-  .cannabis-partner-section,
-  .sponsorship-contribute{
-    background:linear-gradient(160deg,#b4c7a4,#d0dcc4) !important;
-  }
-}
-
 
 /* v25 real CannabisMD TeleMed logo */
 .cannabismd-logo-panel{
@@ -1359,155 +812,20 @@ body{
 }
 
 
-/* v26 final readability + unified resource grid */
+
+/* MEMBER RESOURCE GRID */
 .member-resource-grid{
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
   max-width:900px;
   margin-left:auto;
   margin-right:auto;
 }
 .member-resource-grid-secondary{
-  display:none !important;
+  display:none!important;
 }
-
-/* Base text color */
-body{
-  color:#352b27 !important;
-}
-
-/* All common light surfaces should use dark readable text */
-.section,
-.section-soft,
-.mission-section,
-.story-media-section,
-.image-story-section,
-.community-preview,
-.callout-earth,
-.card,
-.shop-card,
-.coloring-download-card,
-.real-logo-card,
-.contact-form,
-.contact-details,
-.info-strip,
-.member-resource-card,
-.shared-inventory-content,
-.member-inventory-category,
-.inventory-admin-category,
-.admin-card,
-.inner-hero,
-.happy-hero + .section{
-  color:#352b27 !important;
-}
-
-.section h1,
-.section h2,
-.section h3,
-.section h4,
-.section p,
-.section li,
-.section strong,
-.section span:not(.eyebrow):not(.card-number):not(.resource-icon),
-.section-soft h1,
-.section-soft h2,
-.section-soft h3,
-.section-soft p,
-.section-soft li,
-.section-soft strong,
-.card h1,
-.card h2,
-.card h3,
-.card p,
-.card small,
-.shop-card h1,
-.shop-card h2,
-.shop-card h3,
-.shop-card p,
-.coloring-download-card h1,
-.coloring-download-card h2,
-.coloring-download-card h3,
-.coloring-download-card p,
-.real-logo-card p,
-.contact-form h1,
-.contact-form h2,
-.contact-form h3,
-.contact-form p,
-.contact-details h1,
-.contact-details h2,
-.contact-details h3,
-.contact-details p,
-.info-strip strong,
-.info-strip span,
-.member-resource-card strong,
-.member-resource-card small,
-.shared-inventory-content,
-.member-inventory-category h2,
-.member-inventory-category strong,
-.member-inventory-category span{
-  color:#352b27 !important;
-}
-
-/* Secondary copy gets medium-dark contrast instead of pale gray */
-.lead,
-.mission-copy p,
-.section-heading p,
-.contact-form p,
-.contact-details p,
-.card p,
-.shop-card p,
-.member-resource-card small,
-.member-inventory-items span,
-.inventory-empty-category,
-.admin-form-note,
-.shared-inventory-header p{
-  color:#54443e !important;
-}
-
-/* Keep accents visible but not washed out */
-.eyebrow,
-.text-link,
-.card-number{
-  color:#7d3446 !important;
-}
-
-/* Preserve intentionally dark/photo hero text as light */
-.photo-hero .eyebrow,
-.photo-hero h1,
-.photo-hero .lead,
-.about-hero .eyebrow,
-.about-hero h1,
-.about-hero .lead,
-.happy-hero .eyebrow,
-.happy-hero h1,
-.happy-hero .lead{
-  color:#fffaf5 !important;
-}
-
-/* Preserve dark brown CannabisMD logo panel and any text rendered within it */
-.cannabismd-logo-panel,
-.cannabismd-logo-panel *{
-  color:#fffaf5 !important;
-}
-
-/* Footer is light green now, so keep its text dark */
-.site-footer,
-.site-footer h1,
-.site-footer h2,
-.site-footer h3,
-.site-footer strong,
-.site-footer a,
-.site-footer p,
-.site-footer span,
-.site-footer small{
-  color:#352b27 !important;
-}
-
 @media(max-width:680px){
-  .member-resource-grid{
-    grid-template-columns:1fr !important;
-  }
+  .member-resource-grid{grid-template-columns:1fr!important}
 }
-
 
 /* v27 The Happy Veteran reference styling */
 :root{
@@ -2548,114 +1866,6 @@ body:has(.thv-enter-theme) .site-footer h3{
   color:var(--thv-gold) !important;
 }
 
-/* v32: stronger Hidden Gem palette across the public Homegrown4Heroes site.
-   THV routes retain their dedicated burgundy/gold theme. */
-:root{
-  --forest:#5f746e;
-  --forest-deep:#4f6660;
-  --moss:#789088;
-  --sage:#b9cbc5;
-  --clay:#9a493d;
-  --burgundy:#8f3f35;
-}
-
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .hero{
-  background:linear-gradient(125deg,#dce7e3 0%,#eef3ef 55%,#b8cbc5 100%);
-  border-bottom-color:#5f746e;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .inner-hero{
-  background:linear-gradient(120deg,#dce7e3,#b9cbc5);
-  border-bottom-color:#5f746e;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .section-dark{
-  background:#5f746e;
-  color:#fffdf8;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .section-soft,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .community-preview,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .story-media-section{
-  background:#dce7e3;
-  color:#24312d;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .program-card,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .prose-grid article{
-  background:#e5eeeb;
-  border-top-color:#9a493d;
-  color:#24312d;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .card,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .product,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .partner-card,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .signup-panel,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .download-card{
-  border-color:#a9beb7;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .button{
-  background:#5f746e;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .button:hover{
-  background:#9a493d;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)) .site-footer{
-  background:#405650;
-  border-top-color:#9a493d;
-}
-
-/* v33: Jennifer's selected wall green is the dominant public-site color.
-   Exact sampled color from supplied swatch: #596e69. THV keeps its own theme. */
-:root{
-  --forest:#596e69;
-  --forest-deep:#455b56;
-  --moss:#718883;
-  --sage:#c4d2ce;
-  --clay:#9b493d;
-  --burgundy:#8d3f35;
-}
-
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)){
-  background:#596e69;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header{
-  background:rgba(223,232,229,.97);
-  border-bottom-color:#596e69;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .hero,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .inner-hero{
-  background:#596e69 !important;
-  color:#fffaf5;
-  border-bottom-color:#9b493d !important;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .hero .eyebrow,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .inner-hero .eyebrow{
-  color:#f0c5b8;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-dark,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .logo-showcase-section,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .cannabis-partner-section{
-  background:#596e69 !important;
-  color:#fffaf5;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .mission-section,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .section-soft,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .community-preview,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .story-media-section,
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .image-story-section{
-  background:#dfe8e5 !important;
-  color:#283632;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button{
-  background:#596e69;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button:hover{
-  background:#9b493d;
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .photo-hero-overlay{
-  background:linear-gradient(90deg,rgba(50,72,67,.93) 0%,rgba(89,110,105,.78) 44%,rgba(89,110,105,.32) 74%,rgba(89,110,105,.16) 100%);
-}
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-footer{
-  background:#455b56;
-  border-top-color:#9b493d;
-}
 
 /* v34: complete public-site palette reset.
    Public Homegrown4Heroes uses ONLY wall green, brick red, earthy tans/creams.
@@ -2669,6 +1879,16 @@ body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-them
   --public-tan-light:#eee1cd;
   --public-cream:#f7efe2;
   --public-ink:#342b26;
+  --ink:var(--public-ink);
+  --forest:var(--public-green);
+  --forest-deep:var(--public-green-dark);
+  --moss:#718883;
+  --sage:#c4d2ce;
+  --clay:var(--public-brick);
+  --soil:var(--public-brick-dark);
+  --cream:var(--public-tan-light);
+  --paper:var(--public-cream);
+  --site-font:"Avenir Next","Segoe UI",Arial,sans-serif;
 }
 
 /* Public-site canvas and chrome */
@@ -2721,7 +1941,7 @@ body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-them
   background:var(--public-brick)!important;
   color:var(--public-cream)!important;
 }
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.eyebrow,.text-link,.card a,.contact-block span){color:var(--public-brick)!important}
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) :is(.eyebrow,.text-link,.card a,.contact-block span){color:var(--public-green-dark)!important}
 
 /* Buttons alternate green/brick but stay within palette */
 body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .button{
@@ -2751,24 +1971,135 @@ body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-them
  }
 }
 
-/* v35: public-site header dropdowns use the brick palette. THV navigation is untouched. */
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu{
-  background:var(--public-brick)!important;
-  border:1px solid var(--public-brick-dark)!important;
-  color:var(--public-cream)!important;
-  box-shadow:0 16px 30px rgba(52,43,38,.22)!important;
+
+/* v36: force the actual shared header dropdown component brick by default.
+   THV-specific rules later in the cascade/themes continue to own lounge pages. */
+.site-header .nav-dropdown-menu {
+  background: #9b493d !important;
+  background-color: #9b493d !important;
+  border-color: #7f392f !important;
+  color: #f6ead8 !important;
 }
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu a{
+.site-header .nav-dropdown-menu a {
+  background: transparent !important;
+  color: #f6ead8 !important;
+}
+.site-header .nav-dropdown-menu a:hover {
+  background: #d8c3a5 !important;
+  color: #302a26 !important;
+}
+
+/* Preserve The Happy Veteran dropdown palette. */
+body:has(.thv-theme) .site-header .nav-dropdown-menu,
+body:has(.thv-auth-theme) .site-header .nav-dropdown-menu,
+body:has(.thv-subpage-theme) .site-header .nav-dropdown-menu,
+body:has(.thv-member-theme) .site-header .nav-dropdown-menu,
+body:has(.thv-admin-theme) .site-header .nav-dropdown-menu,
+body:has(.thv-enter-theme) .site-header .nav-dropdown-menu {
+  background: #25080e !important;
+  background-color: #25080e !important;
+}
+
+
+
+/* CURRENT PUBLIC-SITE TEXT CONTRAST
+   Brick is reserved for backgrounds/borders/buttons, not general text. */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+:is(.section-dark,.logo-showcase-section,.cannabis-partner-section)
+:is(h1,h2,h3,h4,h5,h6,p,li,strong,small,.eyebrow,.text-link){
   color:var(--public-cream)!important;
 }
-body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu a:hover{
-  background:var(--public-tan)!important;
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+:is(.section-dark,.logo-showcase-section,.cannabis-partner-section)
+:is(.card,.program-card,.feature-card,.partner-card,.real-logo-card,.endorser-card)
+:is(h1,h2,h3,h4,h5,h6,p,li,strong,small,.eyebrow,.text-link,.card-number){
   color:var(--public-ink)!important;
 }
-@media(max-width:900px){
-  body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme)) .site-header .nav-dropdown-menu{
-    background:var(--public-brick)!important;
-    border-left:4px solid var(--public-tan)!important;
-    padding:8px 12px!important;
+
+/* v39 FIX PHOTO HERO READABILITY
+   Explicitly override the v38 global text rule on image-backed hero sections.
+   THV remains untouched.
+*/
+
+/* LANDING PAGE HERO */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.photo-hero .photo-hero-overlay{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24,22,20,.76) 0%,
+      rgba(28,25,22,.62) 45%,
+      rgba(34,31,27,.34) 72%,
+      rgba(34,31,27,.12) 100%
+    ) !important;
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.photo-hero .photo-hero-content h1{
+  color:#FFF8ED !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.34);
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.photo-hero .photo-hero-content .lead,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.photo-hero .photo-hero-content p{
+  color:#FFF3DF !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.28);
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.photo-hero .photo-hero-content .eyebrow{
+  color:#F2D5A8 !important;
+  text-shadow:0 2px 10px rgba(0,0,0,.28);
+}
+
+/* ABOUT PAGE HERO */
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.about-hero .about-hero-overlay{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24,22,20,.78) 0%,
+      rgba(29,26,23,.64) 44%,
+      rgba(36,32,28,.34) 72%,
+      rgba(36,32,28,.12) 100%
+    ) !important;
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.about-hero .about-hero-content h1{
+  color:#FFF8ED !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.34);
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.about-hero .about-hero-content .lead,
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.about-hero .about-hero-content p{
+  color:#FFF3DF !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.28);
+}
+
+body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+.about-hero .about-hero-content .eyebrow{
+  color:#F2D5A8 !important;
+  text-shadow:0 2px 10px rgba(0,0,0,.28);
+}
+
+/* Mobile: darker bottom gradient behind copy */
+@media(max-width:720px){
+  body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+  .photo-hero .photo-hero-overlay,
+  body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))
+  .about-hero .about-hero-overlay{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20,18,16,.12) 0%,
+        rgba(20,18,16,.45) 45%,
+        rgba(20,18,16,.86) 100%
+      ) !important;
   }
 }

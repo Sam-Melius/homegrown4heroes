@@ -40,7 +40,17 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="shell callout callout-earth">
-          <div><span className="eyebrow">Connect with us</span><h2>Want to learn more about Homegrown4Heroes?</h2><p>Explore the programs or schedule a new-member consultation.</p></div>
+          <div><span
+            style={{
+              display: "block",
+              marginBottom: "13px",
+              color: "var(--public-cream)",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              letterSpacing: ".18em",
+              fontSize: ".75rem",
+            }}
+>Connect with us</span><h2>Want to learn more about Homegrown4Heroes?</h2><p>Explore the programs or schedule a new-member consultation.</p></div>
           <div className="actions"><a className="button" href="/programs">Explore Programs</a><a className="button button-ghost" href="https://calendly.com/homegrown4heroes/new-member-consult" target="_blank" rel="noreferrer">Schedule a Consult</a></div>
         </div>
       </section>
