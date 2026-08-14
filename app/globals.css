@@ -2088,6 +2088,8 @@ body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-them
   text-shadow:0 2px 10px rgba(0,0,0,.28);
 }
 
+
+
 /* Mobile: darker bottom gradient behind copy */
 @media(max-width:720px){
   body:not(:has(.thv-theme)):not(:has(.thv-auth-theme)):not(:has(.thv-subpage-theme)):not(:has(.thv-member-theme)):not(:has(.thv-admin-theme)):not(:has(.thv-enter-theme))

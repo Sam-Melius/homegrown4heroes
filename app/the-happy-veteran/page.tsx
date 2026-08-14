@@ -23,7 +23,7 @@ export default function HappyVeteranPage() {
         </div>
       </section>
 
-      <div className="thv-tagline-strip">THV — Lynchburg&apos;s favorite living room</div>
+      <div className="thv-tagline-strip">520 5th Street · Lynchburg, VA 24504 · 434.381.0087</div>
 
       <section className="section thv-lounge-section">
         <div className="shell">

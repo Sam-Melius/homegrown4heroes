@@ -165,7 +165,7 @@ export default async function CommunityHub() {
             </Link>
           </div>
         </section>
-
+<div className="thv-tagline-strip">520 5th Street · Lynchburg, VA 24504 · 434.381.0087</div>
 </main>
   );
 }
