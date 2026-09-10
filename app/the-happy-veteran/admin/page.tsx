@@ -81,7 +81,24 @@ export default async function AdminPage() {
       .order("position", { ascending: true }),
   ]);
 
-  const inventory = (inventoryData || []) as InventoryCategory[];
+  const inventory = ((inventoryData || []) as InventoryCategory[])
+    .map((category) => ({
+      ...category,
+      inventory_items: category.inventory_items
+        ? [...category.inventory_items].sort((a, b) =>
+            a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+          )
+        : null,
+    }))
+    .sort((a, b) => {
+      const aIsFlower = a.name.trim().toLowerCase() === "flower";
+      const bIsFlower = b.name.trim().toLowerCase() === "flower";
+
+      if (aIsFlower && !bIsFlower) return -1;
+      if (!aIsFlower && bIsFlower) return 1;
+
+      return a.position - b.position;
+    });
   const inventoryItemCount = inventory.reduce(
     (total, category) => total + (category.inventory_items?.length || 0),
     0,

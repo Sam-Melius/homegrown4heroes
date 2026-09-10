@@ -44,7 +44,24 @@ export default async function SharedInventoryPage() {
       ascending: true,
     });
 
-  const inventory = (data || []) as InventoryCategory[];
+  const inventory = ((data || []) as InventoryCategory[])
+    .map((category) => ({
+      ...category,
+      inventory_items: category.inventory_items
+        ? [...category.inventory_items].sort((a, b) =>
+            a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+          )
+        : null,
+    }))
+    .sort((a, b) => {
+      const aIsFlower = a.name.trim().toLowerCase() === "flower";
+      const bIsFlower = b.name.trim().toLowerCase() === "flower";
+
+      if (aIsFlower && !bIsFlower) return -1;
+      if (!aIsFlower && bIsFlower) return 1;
+
+      return a.position - b.position;
+    });
 
   return (
     <main className="shared-inventory-page thv-subpage-theme">
