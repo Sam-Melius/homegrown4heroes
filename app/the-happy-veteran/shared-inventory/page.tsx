@@ -54,14 +54,32 @@ export default async function SharedInventoryPage() {
         : null,
     }))
     .sort((a, b) => {
-      const aIsFlower = a.name.trim().toLowerCase() === "flower";
-      const bIsFlower = b.name.trim().toLowerCase() === "flower";
+      const preferredOrder = [
+        "house - flower",
+        "house - concentrates",
+        "house - pre-rolls",
+        "house - edibles",
+        "house - dispos",
+        "flower - hybrid",
+        "flower - indica",
+        "flower - sativa",
+        "concentrates",
+        "edibles",
+        "pre-rolls",
+        "dispos",
+      ];
+      const normalize = (value: string) => value.trim().toLowerCase();
+      const aIndex = preferredOrder.indexOf(normalize(a.name));
+      const bIndex = preferredOrder.indexOf(normalize(b.name));
 
-      if (aIsFlower && !bIsFlower) return -1;
-      if (!aIsFlower && bIsFlower) return 1;
-
-      return a.position - b.position;
+      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+      if (aIndex !== -1) return -1;
+      if (bIndex !== -1) return 1;
+      return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
     });
+
+  const categoryId = (name: string, id: string) =>
+    `inventory-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}-${id.slice(0, 6)}`;
 
   return (
     <main className="shared-inventory-page thv-subpage-theme">
@@ -79,10 +97,19 @@ export default async function SharedInventoryPage() {
         </header>
 
         {inventory.length ? (
-          <div className="member-inventory-grid">
+          <>
+            <nav className="inventory-category-jump" aria-label="Inventory categories">
+              {inventory.map((category) => (
+                <a key={category.id} href={`#${categoryId(category.name, category.id)}`}>
+                  {category.name}
+                </a>
+              ))}
+            </nav>
+            <div className="member-inventory-grid">
             {inventory.map((category) => (
               <section
-                className="member-inventory-category"
+                className={`member-inventory-category ${category.name.trim().toLowerCase().startsWith("house -") ? "house-inventory-category" : ""}`}
+                id={categoryId(category.name, category.id)}
                 key={category.id}
               >
                 <h2>{category.name}</h2>
@@ -103,7 +130,8 @@ export default async function SharedInventoryPage() {
                 )}
               </section>
             ))}
-          </div>
+            </div>
+          </>
         ) : (
           <div className="admin-empty-state">
             <strong>No inventory has been posted yet.</strong>

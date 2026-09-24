@@ -2,17 +2,9 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import {
-  addInventoryCategory,
-  addInventoryItem,
-  deleteInventoryCategory,
-  deleteInventoryItem,
-  updateInventoryCategory,
-  updateInventoryItem,
   updateMember,
   updateMemberRole,
   updateOrderStatus,
-  updateEdibleExperienceTime,
-  updateFlowerExperienceTime,
 } from "@/app/admin/actions";
 
 type InventoryItem = {
@@ -68,17 +60,6 @@ export default async function AdminPage() {
       .select("id, items, notes, status, created_at, profiles(full_name, discord_name)")
       .order("created_at", { ascending: false })
       .limit(75),
-  ]);
-
-  const [{ data: edibleTimes }, { data: flowerTimes }] = await Promise.all([
-    supabase
-      .from("lounge_edible_times")
-      .select("id, label, minutes, position")
-      .order("position", { ascending: true }),
-    supabase
-      .from("lounge_flower_times")
-      .select("id, rating, minutes_1, minutes_2, minutes_3, minutes_4, position")
-      .order("position", { ascending: true }),
   ]);
 
   const inventory = ((inventoryData || []) as InventoryCategory[])
@@ -161,255 +142,19 @@ export default async function AdminPage() {
           </article>
         </section>
 
-        <section className="admin-card inventory-manager-card">
-          <div className="admin-card-header">
-            <div>
-              <span className="community-label">Member lounge</span>
-              <h2>Shared Inventory</h2>
-            </div>
-            <Link
-              className="button button-small button-ghost"
-              href="/the-happy-veteran/shared-inventory"
-            >
-              View Member Page
-            </Link>
-          </div>
-
-          <div className="inventory-add-category">
-            <form action={addInventoryCategory}>
-              <label>
-                Add category
-                <div className="inventory-inline-form">
-                  <input
-                    name="name"
-                    placeholder="Example: Flower"
-                    required
-                  />
-                  <button className="button button-small" type="submit">
-                    Add Category
-                  </button>
-                </div>
-              </label>
-            </form>
-          </div>
-
-          {inventory.length ? (
-            <div className="inventory-admin-list">
-              {inventory.map((category) => (
-                <section className="inventory-admin-category" key={category.id}>
-                  <div className="inventory-category-admin-header">
-                    <form
-                      action={updateInventoryCategory}
-                      className="inventory-category-name-form"
-                    >
-                      <input type="hidden" name="id" value={category.id} />
-                      <input
-                        name="name"
-                        defaultValue={category.name}
-                        aria-label={`Category name for ${category.name}`}
-                        required
-                      />
-                      <button
-                        className="button button-small button-ghost"
-                        type="submit"
-                      >
-                        Save Name
-                      </button>
-                    </form>
-
-                    <form action={deleteInventoryCategory}>
-                      <input type="hidden" name="id" value={category.id} />
-                      <button
-                        className="button button-small button-danger"
-                        type="submit"
-                      >
-                        Delete Category
-                      </button>
-                    </form>
-                  </div>
-
-                  <div className="inventory-admin-items">
-                    {category.inventory_items?.length ? (
-                      category.inventory_items.map((item) => (
-                        <article className="inventory-admin-item" key={item.id}>
-                          <form
-                            action={updateInventoryItem}
-                            className="inventory-item-edit-form"
-                          >
-                            <input type="hidden" name="id" value={item.id} />
-
-                            <label>
-                              Item
-                              <input
-                                name="name"
-                                defaultValue={item.name}
-                                required
-                              />
-                            </label>
-
-                            <label>
-                              Details
-                              <input
-                                name="details"
-                                defaultValue={item.details || ""}
-                                placeholder="Optional"
-                              />
-                            </label>
-
-                            <button
-                              className="button button-small button-ghost"
-                              type="submit"
-                            >
-                              Save
-                            </button>
-                          </form>
-
-                          <form action={deleteInventoryItem}>
-                            <input type="hidden" name="id" value={item.id} />
-                            <button
-                              className="inventory-delete-link"
-                              type="submit"
-                            >
-                              Delete
-                            </button>
-                          </form>
-                        </article>
-                      ))
-                    ) : (
-                      <div className="inventory-category-empty">
-                        No items in this category yet.
-                      </div>
-                    )}
-                  </div>
-
-                  <form
-                    action={addInventoryItem}
-                    className="inventory-add-item-form"
-                  >
-                    <input
-                      type="hidden"
-                      name="categoryId"
-                      value={category.id}
-                    />
-                    <div>
-                      <label>
-                        New item
-                        <input name="name" placeholder="Item name" required />
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        Details
-                        <input
-                          name="details"
-                          placeholder="Optional details"
-                        />
-                      </label>
-                    </div>
-                    <button className="button button-small" type="submit">
-                      Add Item
-                    </button>
-                  </form>
-                </section>
-              ))}
-            </div>
-          ) : (
-            <div className="admin-empty-state">
-              <strong>No inventory categories yet.</strong>
-              <p>Add the first category above.</p>
-            </div>
-          )}
-        </section>
-
-
-        <section className="admin-card lounge-experience-admin-card">
-          <div className="admin-card-header">
-            <div>
-              <span className="community-label">Member lounge</span>
-              <h2>Suggested Lounge Experience</h2>
-            </div>
-            <Link
-              className="button button-small button-ghost"
-              href="/the-happy-veteran/lounge-experience"
-            >
-              View Member Page
-            </Link>
-          </div>
-
-          <div className="experience-admin-grid">
-            <section>
-              <h3>Edibles</h3>
-              <div className="experience-admin-list">
-                {(edibleTimes || []).map((item) => (
-                  <form
-                    action={updateEdibleExperienceTime}
-                    className="experience-edible-admin-row"
-                    key={item.id}
-                  >
-                    <input type="hidden" name="id" value={item.id} />
-                    <label>
-                      Label
-                      <input name="label" defaultValue={item.label} required />
-                    </label>
-                    <label>
-                      Minutes
-                      <input
-                        name="minutes"
-                        type="number"
-                        min="0"
-                        step="1"
-                        defaultValue={item.minutes}
-                        required
-                      />
-                    </label>
-                    <button className="button button-small button-ghost" type="submit">
-                      Save
-                    </button>
-                  </form>
-                ))}
-              </div>
-            </section>
-
-            <section>
-              <h3>Flower</h3>
-              <p className="admin-form-note">
-                Edit the four minute values shown for each flower rating.
-              </p>
-              <div className="experience-admin-list">
-                {(flowerTimes || []).map((item) => (
-                  <form
-                    action={updateFlowerExperienceTime}
-                    className="experience-flower-admin-row"
-                    key={item.id}
-                  >
-                    <input type="hidden" name="id" value={item.id} />
-                    <label className="experience-rating-field">
-                      Rating
-                      <input name="rating" defaultValue={item.rating} required />
-                    </label>
-                    {[item.minutes_1, item.minutes_2, item.minutes_3, item.minutes_4].map(
-                      (value, index) => (
-                        <label key={index}>
-                          Min {index + 1}
-                          <input
-                            name={`minutes${index + 1}`}
-                            type="number"
-                            min="0"
-                            step="1"
-                            defaultValue={value}
-                            required
-                          />
-                        </label>
-                      ),
-                    )}
-                    <button className="button button-small button-ghost" type="submit">
-                      Save
-                    </button>
-                  </form>
-                ))}
-              </div>
-            </section>
-          </div>
+        <section className="admin-management-grid" aria-label="Admin management pages">
+          <Link className="admin-management-card" href="/the-happy-veteran/admin/inventory">
+            <span className="community-label">Manage</span>
+            <h2>Shared Inventory</h2>
+            <p>Add, edit, and remove inventory categories and items on a dedicated page.</p>
+            <strong>Open Inventory Manager →</strong>
+          </Link>
+          <Link className="admin-management-card" href="/the-happy-veteran/admin/lounge-experience">
+            <span className="community-label">Manage</span>
+            <h2>Lounge Experience</h2>
+            <p>Update the suggested edible and flower experience values without scrolling through the dashboard.</p>
+            <strong>Open Experience Manager →</strong>
+          </Link>
         </section>
 
         <section className="admin-priority-grid">

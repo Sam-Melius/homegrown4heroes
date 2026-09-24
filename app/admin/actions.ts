@@ -95,6 +95,7 @@ export async function saveSharedInventory(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 
@@ -117,6 +118,7 @@ export async function addInventoryCategory(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 export async function updateInventoryCategory(formData: FormData) {
@@ -128,6 +130,7 @@ export async function updateInventoryCategory(formData: FormData) {
   await supabase.from("inventory_categories").update({ name }).eq("id", id);
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 export async function deleteInventoryCategory(formData: FormData) {
@@ -138,6 +141,7 @@ export async function deleteInventoryCategory(formData: FormData) {
   await supabase.from("inventory_categories").delete().eq("id", id);
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 export async function addInventoryItem(formData: FormData) {
@@ -164,6 +168,7 @@ export async function addInventoryItem(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 export async function updateInventoryItem(formData: FormData) {
@@ -184,6 +189,7 @@ export async function updateInventoryItem(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 export async function deleteInventoryItem(formData: FormData) {
@@ -194,6 +200,7 @@ export async function deleteInventoryItem(formData: FormData) {
   await supabase.from("inventory_items").delete().eq("id", id);
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/shared-inventory");
+  revalidatePath("/the-happy-veteran/admin/inventory");
 }
 
 
@@ -216,6 +223,7 @@ export async function updateEdibleExperienceTime(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/lounge-experience");
+  revalidatePath("/the-happy-veteran/admin/lounge-experience");
 }
 
 export async function updateFlowerExperienceTime(formData: FormData) {
@@ -246,4 +254,5 @@ export async function updateFlowerExperienceTime(formData: FormData) {
 
   revalidatePath("/the-happy-veteran/admin");
   revalidatePath("/the-happy-veteran/lounge-experience");
+  revalidatePath("/the-happy-veteran/admin/lounge-experience");
 }
