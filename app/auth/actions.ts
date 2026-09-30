@@ -13,8 +13,9 @@ export async function signUp(formData: FormData) {
   const password = String(formData.get("password") ?? "");
   const fullName = String(formData.get("fullName") ?? "").trim();
   const discordName = String(formData.get("discordName") ?? "").trim();
+  const memberId = String(formData.get("memberId") ?? "").trim();
 
-  if (!email || password.length < 8 || !fullName || !discordName) {
+  if (!email || password.length < 8 || !fullName || !discordName || !memberId) {
     redirect(messageUrl("/signup", "Complete every field and use at least 8 password characters."));
   }
 
@@ -24,7 +25,7 @@ export async function signUp(formData: FormData) {
     password,
     options: {
       emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/auth/callback`,
-      data: { full_name: fullName, discord_name: discordName },
+      data: { full_name: fullName, discord_name: discordName, member_id: memberId },
     },
   });
 

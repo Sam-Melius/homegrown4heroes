@@ -2218,3 +2218,71 @@ html { scroll-behavior: smooth; }
   .inventory-admin-jump-heading { align-items: flex-start; flex-direction: column; }
   .inventory-admin-jump-grid { grid-template-columns: 1fr; }
 }
+
+
+/* THV Shared Inventory: TV-friendly category directory */
+.inventory-tv-directory {
+  display: grid;
+  gap: 18px;
+  margin: 22px 0 28px;
+  padding: 22px;
+  border: 1px solid rgba(213, 174, 76, .42);
+  background: rgba(37, 4, 10, .76);
+}
+.inventory-directory-group h2 {
+  margin: 0 0 10px;
+  color: #f1cd68;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.inventory-directory-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.inventory-directory-links-house {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.inventory-directory-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 12px 14px;
+  border: 1px solid rgba(213, 174, 76, .58);
+  background: rgba(76, 7, 18, .72);
+  color: #f6d878;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+}
+.inventory-directory-links a:hover,
+.inventory-directory-links a:focus-visible {
+  background: rgba(132, 14, 31, .9);
+  border-color: #e0b84f;
+  outline: none;
+}
+.inventory-directory-other {
+  padding-top: 4px;
+  border-top: 1px solid rgba(213, 174, 76, .2);
+}
+.member-inventory-category {
+  scroll-margin-top: 24px;
+}
+@media (max-width: 900px) {
+  .inventory-directory-links-house,
+  .inventory-directory-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .inventory-tv-directory { padding: 16px; }
+  .inventory-directory-links-house,
+  .inventory-directory-links {
+    grid-template-columns: 1fr;
+  }
+}

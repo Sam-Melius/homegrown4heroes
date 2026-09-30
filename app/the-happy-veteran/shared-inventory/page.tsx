@@ -81,6 +81,36 @@ export default async function SharedInventoryPage() {
   const categoryId = (name: string, id: string) =>
     `inventory-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}-${id.slice(0, 6)}`;
 
+  const normalize = (value: string) => value.trim().toLowerCase();
+  const houseLabels: Record<string, string> = {
+    "house - flower": "Flower",
+    "house - concentrates": "Concentrates",
+    "house - pre-rolls": "Prerolls",
+    "house - prerolls": "Prerolls",
+    "house - edibles": "Baked & Candies",
+    "house - baked & candies": "Baked & Candies",
+  };
+  const nonInfusedNames = new Set(["chips", "drinks", "snacks"]);
+
+  const houseCategories = inventory
+    .filter((category) => houseLabels[normalize(category.name)])
+    .sort((a, b) =>
+      houseLabels[normalize(a.name)].localeCompare(houseLabels[normalize(b.name)], undefined, {
+        sensitivity: "base",
+      }),
+    );
+
+  const nonInfusedCategories = inventory
+    .filter((category) => nonInfusedNames.has(normalize(category.name)))
+    .sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+
+  const directoryIds = new Set([
+    ...houseCategories.map((category) => category.id),
+    ...nonInfusedCategories.map((category) => category.id),
+  ]);
+
+  const otherCategories = inventory.filter((category) => !directoryIds.has(category.id));
+
   return (
     <main className="shared-inventory-page thv-subpage-theme">
       <div className="shell shared-inventory-shell">
@@ -98,12 +128,43 @@ export default async function SharedInventoryPage() {
 
         {inventory.length ? (
           <>
-            <nav className="inventory-category-jump" aria-label="Inventory categories">
-              {inventory.map((category) => (
-                <a key={category.id} href={`#${categoryId(category.name, category.id)}`}>
-                  {category.name}
-                </a>
-              ))}
+            <nav className="inventory-tv-directory" aria-label="Inventory categories">
+              {houseCategories.length ? (
+                <section className="inventory-directory-group inventory-directory-house">
+                  <h2>HOUSE</h2>
+                  <div className="inventory-directory-links inventory-directory-links-house">
+                    {houseCategories.map((category) => (
+                      <a key={category.id} href={`#${categoryId(category.name, category.id)}`}>
+                        {houseLabels[normalize(category.name)]}
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+              {nonInfusedCategories.length ? (
+                <section className="inventory-directory-group">
+                  <h2>Non-Infused</h2>
+                  <div className="inventory-directory-links">
+                    {nonInfusedCategories.map((category) => (
+                      <a key={category.id} href={`#${categoryId(category.name, category.id)}`}>
+                        {category.name}
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+              {otherCategories.length ? (
+                <section className="inventory-directory-group inventory-directory-other">
+                  <h2>More Categories</h2>
+                  <div className="inventory-directory-links">
+                    {otherCategories.map((category) => (
+                      <a key={category.id} href={`#${categoryId(category.name, category.id)}`}>
+                        {category.name}
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
             </nav>
             <div className="member-inventory-grid">
             {inventory.map((category) => (

@@ -48,7 +48,7 @@ export default async function AdminPage() {
   ] = await Promise.all([
     supabase
       .from("profiles")
-      .select("id, full_name, discord_name, status, role, created_at")
+      .select("id, full_name, member_id, discord_name, status, role, created_at")
       .order("created_at", { ascending: false }),
     supabase
       .from("inventory_categories")
@@ -178,6 +178,9 @@ export default async function AdminPage() {
                     </div>
                     <div className="approval-details">
                       <strong>{member.full_name || "Unnamed member"}</strong>
+                      <span>
+                        Member ID: {member.member_id || "Not supplied"}
+                      </span>
                       <span>
                         Discord: {member.discord_name || "Not supplied"}
                       </span>
