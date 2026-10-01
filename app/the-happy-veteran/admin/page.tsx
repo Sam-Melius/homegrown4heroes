@@ -174,15 +174,12 @@ export default async function AdminPage() {
                 {pendingMembers.map((member) => (
                   <article key={member.id}>
                     <div className="approval-avatar">
-                      {(member.full_name || member.discord_name || "M").charAt(0)}
+                      {(member.full_name || member.member_id || "M").charAt(0)}
                     </div>
                     <div className="approval-details">
                       <strong>{member.full_name || "Unnamed member"}</strong>
                       <span>
                         Member ID: {member.member_id || "Not supplied"}
-                      </span>
-                      <span>
-                        Discord: {member.discord_name || "Not supplied"}
                       </span>
                       <small>
                         Requested{" "}

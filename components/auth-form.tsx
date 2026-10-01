@@ -23,7 +23,6 @@ export function SignupForm({ message }: { message?: string }) {
       {message && <p className="form-message">{message}</p>}
       <label>Full name<input name="fullName" autoComplete="name" required /></label>
       <label>Member ID<input name="memberId" placeholder="Your membership ID" required /></label>
-      <label>Discord username<input name="discordName" placeholder="Your current Discord name" required /></label>
       <label>Email<input name="email" type="email" autoComplete="email" required /></label>
       <label>Password<input name="password" type="password" minLength={8} autoComplete="new-password" required /></label>
       <button className="button button-full" type="submit">Submit request</button>
